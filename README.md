@@ -12,4 +12,7 @@ How might we support UW students in identifying and securing the most affordable
 Home Page
 - Map: An interactive map of the U-District area of Seattle that users can use to find housing options in the area.
 - Map Filtering: Allows users to more specifically search the relevant housing options based on factors like rent price, lease timelines, number of bedrooms, etc.
+Listings
+- Housing listings with rent, rooms, commute distance, etc.
+- Housing credibility rating
 
