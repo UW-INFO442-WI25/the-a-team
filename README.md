@@ -1,8 +1,15 @@
-# React + Vite
+# Husky Habitat
+## Group 4: The ‘A’ Team
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Our Mission
 
-Currently, two official plugins are available:
+The United Nations’ eleventh goal, sustainable cities and communities, aims to make cities inclusive, safe, resilient, and sustainable. Our project focuses on this sustainable development goal in order to help college students at the University of Washington find affordable housing options within adequate commuting distance to school that fit their needs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Problem Statement
+How might we support UW students in identifying and securing the most affordable housing options that align with their timeline, financial needs, and living needs?
+
+## Features
+Home Page
+- Map: An interactive map of the U-District area of Seattle that users can use to find housing options in the area.
+- Map Filtering: Allows users to more specifically search the relevant housing options based on factors like rent price, lease timelines, number of bedrooms, etc.
+
