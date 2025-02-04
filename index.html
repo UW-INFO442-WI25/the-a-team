@@ -1,69 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="apartment-listing-page.css">
-    <title> University of Washington Apartment Listing Page</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Cindy Susanto, Maya Lukalapu, Nandita Raman, Natalie Olson, Nathaniel Sayasack">
+    <meta name="description" content="Supporting University of Washington students in finding affordable housing options to fit their personal needs">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Husky Habitat</title>
+    <link rel="icon" type="image/x-icon" href="img/huskyhabitatfavicon.png">
+
+    <!-- Fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="\src\index.css">
 </head>
-<body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="nav-item">Home</a>
-            <div>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Filter</a>
-                <a href="#" class="nav-item">Chat</a>
-                <a href="#" class="nav-item">Log in/Sign in</a>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="listings">
-            <input type="text" class="search-bar" placeholder="Search">
-            
-            <div class="filters">
-                <button class="filter-btn">Price</button>
-                <button class="filter-btn">Location</button>
-                <button class="filter-btn">Bedrooms</button>
-            </div>
-
-            <div class="listing-card">
-                <div class="listing-image"></div>
-                <div class="listing-content">
-                    <div class="listing-title">
-                        <span>Ori On The Ave</span>
-                        <span class="heart-icon">♡</span>
-                    </div>
-                    <div class="listing-details">
-                        Address: 5263 University Way NE, Seattle, WA 98105<br>
-                        Units: Studio apartments
-                    </div>
-                    <div class="listing-price">$1,538–$1,934 per month</div>
-                    <a href="#" class="see-more-btn">See More</a>
-                </div>
-            </div>
-
-            <div class="listing-card">
-                <div class="listing-image"></div>
-                <div class="listing-content">
-                    <div class="listing-title">
-                        <span>Arista Catering</span>
-                        <span class="heart-icon">♡</span>
-                    </div>
-                    <div class="listing-details">
-                        Address: 4715 25th Ave NE, Seattle, WA 98105<br>
-                        Units: Studio to 3-bedroom apartments
-                    </div>
-                    <div class="listing-price">$2,035–$14,805 per month</div>
-                    <a href="#" class="see-more-btn">See More</a>
-                </div>
-            </div>
-
-            <button class="show-more">Show More</button>
-        </div>
-
-        <div class="map-container"></div>
-    </div>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
