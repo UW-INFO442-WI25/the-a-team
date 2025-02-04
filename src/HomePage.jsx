@@ -3,7 +3,7 @@ import React from 'react';
 export function HomePage(props) {
     return (
         <>
-            {/* <main>
+            <main>
                 <div className="container">
                     <div className="listings">
                         <input type="text" className="search-bar" placeholder="Search" />
@@ -52,7 +52,7 @@ export function HomePage(props) {
                     <div className="map-container"></div>
                 </div>
 
-            </main> */}
+            </main>
         </>
     );
 }

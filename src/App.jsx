@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <header className="header">
-        <nav className="nav">
+        <nav>
           {/* Render navigation bar */}
           <NavBar />
         </nav>
