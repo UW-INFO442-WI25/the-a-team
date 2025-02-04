@@ -17,17 +17,25 @@ body {
     gap: 20px;
 }
 
+/* HEADER */
+
 .header {
     background: white;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+/* NAV BAR  */
+
+.logo {
+    height: 80px;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .nav-item {
@@ -44,6 +52,8 @@ body {
     gap: 10px;
 }
 
+/* SEARCH */
+
 .search-bar {
     width: 100%;
     padding: 10px;
@@ -51,6 +61,8 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+/* FILTERING */
 
 .filters {
     display: flex;
@@ -65,6 +77,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* LISTINGS */
 
 .listings {
     flex: 1;
@@ -122,6 +136,8 @@ body {
     border-radius: 5px;
     font-size: 14px;
 }
+
+/* MAP  */
 
 .map-container {
     flex: 1;

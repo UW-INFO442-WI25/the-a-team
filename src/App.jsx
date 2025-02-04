@@ -10,6 +10,7 @@ const App = () => {
   return (
     <>
       <header className="header">
+      
         <nav>
           {/* Render navigation bar */}
           <NavBar />
