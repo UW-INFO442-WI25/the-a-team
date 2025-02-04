@@ -7,9 +7,8 @@ export function NavBar(props) {
       <NavLink to="/" className="nav-item">Home</NavLink>
       <div className="nav-links">
         <NavLink to="/about" className="nav-item">About</NavLink>
-        <NavLink to="/filter" className="nav-item">Filter</NavLink>
         <NavLink to="/chat" className="nav-item">Chat</NavLink>
-        <NavLink to="/login" className="nav-item">Log in/Sign in</NavLink>
+        <NavLink to="/sign-in" className="nav-item">Sign In</NavLink>
       </div>
     </div>
   );
