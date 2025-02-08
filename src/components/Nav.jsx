@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-export function NavBar(props) {
+export function NavBar() {
   return (
     <div className="nav">
       {/* Logo */}

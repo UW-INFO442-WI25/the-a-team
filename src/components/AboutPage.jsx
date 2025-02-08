@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function AboutPage(props) {
+export function AboutPage() {
     return (
         <>
             <main>

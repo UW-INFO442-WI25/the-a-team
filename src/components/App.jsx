@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { HomePage } from './HomePage';
-import { AboutPage } from './AboutPage';
-import { ChatPage } from './ChatPage';
-import { SignInPage } from './SignInPage';
-import { NavBar } from './Nav';
+import { HomePage } from './components/HomePage';
+import { AboutPage } from './components/AboutPage';
+import { ChatPage } from './components/ChatPage';
+import { SignInPage } from './components/SignInPage';
+import { NavBar } from './components/Nav';
 
 const App = () => {
   return (

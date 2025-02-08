@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function SignInPage(props) {
+export function SignInPage() {
     return (
         <>
             <main>

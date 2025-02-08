@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ChatPage(props) {
+export function ChatPage() {
     return (
         <>
             <main>
