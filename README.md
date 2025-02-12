@@ -16,3 +16,14 @@ Listings
 - Housing listings with rent, rooms, commute distance, etc.
 - Housing credibility rating
 
+## Published Site
+
+## Group Members
+Cindy Susanto
+Maya Lukalapu
+Nandita Raman
+Natalie Olson
+Nathaniel Sayasack
+
+## User Personas
+
