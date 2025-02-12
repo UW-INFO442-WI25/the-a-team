@@ -1,10 +1,12 @@
 import React from 'react';
+import 'leaflet/dist/leaflet.css';
 import { Routes, Route } from 'react-router-dom';
 import { HomePage } from './HomePage';
 import { AboutPage } from './AboutPage';
 import { ChatPage } from './ChatPage';
 import { SignInPage } from './SignInPage';
 import { NavBar } from './Nav';
+import MapComponent from './Map';
 
 const App = () => {
   return (
@@ -23,7 +25,9 @@ const App = () => {
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/sign-in" element={<SignInPage />} />
       </Routes>
+      <MapComponent />
     </>
+    
   );
 }
 
