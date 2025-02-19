@@ -12,6 +12,7 @@ export function NavBar() {
         <NavLink to="/" className="nav-item">Home</NavLink>
         <NavLink to="/about" className="nav-item">About</NavLink>
         <NavLink to="/chat" className="nav-item">Chat</NavLink>
+        <NavLink to="/search" className="nav-item">Search</NavLink>
         <NavLink to="/sign-in" className="nav-item">Sign In</NavLink>
       </div>
     </div>
