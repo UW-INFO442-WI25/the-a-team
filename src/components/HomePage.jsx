@@ -1,4 +1,5 @@
 import React from 'react';
+import MapComponent from './Map';
 
 export function HomePage() {
     return (
@@ -98,7 +99,9 @@ export function HomePage() {
                         <button className="show-more">Show More</button>
                     </div>
 
-                    <div className="map-container"></div>
+                    <div className="map-container">
+                        <MapComponent />
+                    </div>
                 </div>
 
             </main>
