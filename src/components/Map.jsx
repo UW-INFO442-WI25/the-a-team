@@ -26,7 +26,7 @@ const MapComponent = () => {
     ];
     return (
         // Here, you can specify what the map will look like (zoom, limits on edges, height, etc.
-        <MapContainer center={[47.6567, -122.3066]} zoom={13} style={{ height: "50vh", width: "70%" }}>
+        <MapContainer center={[47.6567, -122.3066]} zoom={13} style={{ height: "100%", width: "100%" }}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
