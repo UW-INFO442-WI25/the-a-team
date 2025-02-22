@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,16 +19,13 @@ body {
 }
 
 /* HEADER */
-
 .header {
     background: white;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-/* NAV BAR  */
-
+/* NAV BAR */
 .logo {
     height: 80px;
 }
@@ -53,7 +51,6 @@ body {
 }
 
 /* SEARCH */
-
 .search-bar {
     width: 100%;
     padding: 10px;
@@ -63,7 +60,6 @@ body {
 }
 
 /* FILTERING */
-
 .filters {
     display: flex;
     gap: 10px;
@@ -79,7 +75,6 @@ body {
 }
 
 /* LISTINGS */
-
 .listings {
     flex: 1;
     max-width: 500px;
@@ -137,12 +132,10 @@ body {
     font-size: 14px;
 }
 
-/* MAP  */
-
+/* MAP */
 .map-container {
     flex: 1;
     height: 800px;
-    background-image: url('/api/placeholder/800/800');
     background-size: cover;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -159,7 +152,183 @@ body {
     cursor: pointer;
     margin-top: 20px;
 }
-/* Search */
+
+/* ABOUT PAGE */
+.about-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-content {
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.brand-left {
+    flex: 1;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.brand-title h2 {
+    font-size: 36px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.husky-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.who-we-are {
+    margin-bottom: 40px;
+}
+
+.who-we-are h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.who-we-are .highlight {
+    color: #333;
+}
+
+.who-we-are p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.brand-right {
+    flex: 1;
+}
+
+.apartment-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Team Section */
+.team-section {
+    margin-top: 60px;
+}
+
+.team-section h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.member-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.member-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .listings {
+        max-width: none;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .brand-section {
+        flex-direction: column;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Search Page Specific Styles */
 .search-main {
     display: flex;
     flex-direction: column;
@@ -180,119 +349,11 @@ body {
     margin-bottom: 10px;
 }
 
-.search-bar {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    background: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: #555;
-}
-
-.filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-.genre-filter, .rating-filter {
-    flex: 1;
-    font-size: 16px;
-}
-
-.genre-filter p, .rating-filter label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.genre-filter label {
-    display: inline-block;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.genre-filter input {
-    margin-right: 5px;
-}
-
-.rating-filter select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
 .search-results {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.listing-card {
-    background: white;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.listing-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.listing-card h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.listing-card p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 5px;
-}
-
-.listing-card p:last-child {
-    font-weight: bold;
-    color: #333;
-}
-
-.listing-card .rating {
-    font-size: 14px;
-    color: #888;
-}
-
-.no-results {
-    text-align: center;
-    font-size: 18px;
-    color: #999;
-    margin-top: 20px;
 }
 
 .clear-btn {
