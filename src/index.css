@@ -165,6 +165,29 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    height: 400px;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.listings {
+    max-width: none;
+}
+
+
+.brand-section {
+    flex-direction: column;
+}
+
+.team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.stats {
+    flex-direction: column;
+    gap: 20px;
 }
 
 
@@ -371,32 +394,6 @@ body {
     background-color: #555;
 }
 
-@media (min-width: 598px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .listings {
-        max-width: none;
-    }
-
-    .map-container {
-        height: 400px;
-    }
-
-    .brand-section {
-        flex-direction: column;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 
 @media (min-width: 768px) {
     /* NAV BAR */
@@ -444,31 +441,6 @@ body {
 
     .ham-menu {
         display: none;
-    }
-
-    .map-container {
-    }
-    
-    .container {
-        flex-direction: column;
-    }
-
-    .listings {
-        max-width: none;
-    }
-
-
-    .brand-section {
-        flex-direction: column;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 20px;
     }
 }
 
