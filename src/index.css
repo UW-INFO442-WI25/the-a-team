@@ -161,10 +161,10 @@ body {
 
 .map-container {
     flex: 1;
-    height: 800px;
     background-size: cover;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 
@@ -446,6 +446,8 @@ body {
         display: none;
     }
 
+    .map-container {
+    }
     
     .container {
         flex-direction: column;
@@ -455,9 +457,6 @@ body {
         max-width: none;
     }
 
-    .map-container {
-        height: 400px;
-    }
 
     .brand-section {
         flex-direction: column;
@@ -490,5 +489,10 @@ body {
         padding: 20px;
         gap: 20px;
         flex-direction: row;
+    }
+
+    .map-container {
+        height: 800px;
+        margin: 0;
     }
 }
