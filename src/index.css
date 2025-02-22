@@ -25,7 +25,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* NAV BAR */
+/* MOBILE VIEW NAV BAR */
+
 .logo {
     height: 80px;
 }
@@ -34,21 +35,52 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 
-.nav-item {
+.ham-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 35px;
+    background-color: #333;
+    border-radius: 25px;
+    display: block;
+}
+
+/* hide nav links on mobile */
+.nav-links,
+.nav-links-mobile {
+    display: none;
+}
+
+/* show nav links when the hamburger menu is toggled */
+.nav-links-mobile.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.nav-item-mobile {
     padding: 10px 20px;
+    width: 100%;
     background: white;
-    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: black;
+    text-align: center;
 }
 
-.nav-links {
-    display: flex;
-    gap: 10px;
-}
 
 /* SEARCH */
 .search-bar {
@@ -300,34 +332,6 @@ body {
     color: #666;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .listings {
-        max-width: none;
-    }
-
-    .map-container {
-        height: 400px;
-    }
-
-    .brand-section {
-        flex-direction: column;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
 /* Search Page Specific Styles */
 .search-main {
     display: flex;
@@ -369,4 +373,85 @@ body {
 
 .clear-btn:hover {
     background-color: #555;
+}
+
+
+/* NAV BAR */
+
+@media (min-width: 768px) {
+    .logo {
+        height: 80px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-item {
+        padding: 10px 20px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: black;
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+        flex-direction: row;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-links-mobile {
+        display: none;
+    }
+
+    .nav-links-mobile.active {
+        display: none;
+    }
+
+    .ham-menu {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .listings {
+        max-width: none;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .brand-section {
+        flex-direction: column;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-item {
+        font-size: 1rem;
+    }
 }

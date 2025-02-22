@@ -12,9 +12,8 @@ const App = () => {
   return (
     <>
       <header className="header">
-      
         <nav>
-          {/* Render navigation bar */}
+          {/* Render navigation bar for desktop*/}
           <NavBar />
         </nav>
       </header>
