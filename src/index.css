@@ -10,14 +10,6 @@ body {
     background-color: #f5f5f5;
 }
 
-.container {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
-    gap: 20px;
-}
-
 /* HEADER */
 .header {
     background: white;
@@ -81,8 +73,13 @@ body {
     text-align: center;
 }
 
+.container {
+    padding: 20px;
+    gap: 20px;
+}
 
-/* SEARCH */
+
+/* SEARCH BAR HOME PAGE */
 .search-bar {
     width: 100%;
     padding: 10px;
@@ -107,10 +104,6 @@ body {
 }
 
 /* LISTINGS */
-.listings {
-    flex: 1;
-    max-width: 500px;
-}
 
 .listing-card {
     background: white;
@@ -165,6 +158,7 @@ body {
 }
 
 /* MAP */
+
 .map-container {
     flex: 1;
     height: 800px;
@@ -172,6 +166,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .show-more {
     display: block;
@@ -186,6 +181,7 @@ body {
 }
 
 /* ABOUT PAGE */
+
 .about-page {
     max-width: 1400px;
     margin: 0 auto;
@@ -375,10 +371,36 @@ body {
     background-color: #555;
 }
 
+@media (min-width: 598px) {
+    .container {
+        flex-direction: column;
+    }
 
-/* NAV BAR */
+    .listings {
+        max-width: none;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .brand-section {
+        flex-direction: column;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
 @media (min-width: 768px) {
+    /* NAV BAR */
+
     .logo {
         height: 80px;
     }
@@ -424,6 +446,7 @@ body {
         display: none;
     }
 
+    
     .container {
         flex-direction: column;
     }
@@ -453,5 +476,19 @@ body {
 @media (min-width: 992px) {
     .nav-item {
         font-size: 1rem;
+    }
+
+    .listings {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+        gap: 20px;
+        flex-direction: row;
     }
 }
