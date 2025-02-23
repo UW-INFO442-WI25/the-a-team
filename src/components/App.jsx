@@ -5,7 +5,6 @@ import { HomePage } from './HomePage';
 import { AboutPage } from './AboutPage';
 import { ChatPage } from './ChatPage';
 import { Search } from './Search';
-import { ListingsPage } from './ListingsPage';
 import { SignInPage } from './SignInPage';
 import { NavBar } from './Nav';
 
