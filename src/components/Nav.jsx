@@ -30,7 +30,6 @@ export function NavBar() {
           <NavLink to="/about" className="nav-item">About</NavLink>
           <NavLink to="/chat" className="nav-item">Chat</NavLink>
           <NavLink to="/search" className="nav-item">Search</NavLink>
-          <NavLink to="/listings" className="nav-item">Listings</NavLink>
           <NavLink to="/sign-in" className="nav-item">Sign In</NavLink>
         </div>
       </div>
@@ -41,7 +40,6 @@ export function NavBar() {
         <NavLink to="/about" className="nav-item-mobile">About</NavLink>
         <NavLink to="/chat" className="nav-item-mobile">Chat</NavLink>
         <NavLink to="/search" className="nav-item-mobile">Search</NavLink>
-        <NavLink to="/listings" className="nav-item-mobile">Listings</NavLink>
         <NavLink to="/sign-in" className="nav-item-mobile">Sign In</NavLink>
       </div>
     </>

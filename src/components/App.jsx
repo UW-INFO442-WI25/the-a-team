@@ -24,8 +24,6 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/search" element={<Search />} /> 
-        {/* TEMPORARY */}
-        <Route path="/listings" element={<ListingsPage />} />
         <Route path="/sign-in" element={<SignInPage />} />
       </Routes>
     </>
