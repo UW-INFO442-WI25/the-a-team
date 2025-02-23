@@ -5,6 +5,7 @@ import { HomePage } from './HomePage';
 import { AboutPage } from './AboutPage';
 import { ChatPage } from './ChatPage';
 import { Search } from './Search';
+import { ListingsPage } from './ListingsPage';
 import { SignInPage } from './SignInPage';
 import { NavBar } from './Nav';
 
@@ -23,6 +24,8 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/search" element={<Search />} /> 
+        {/* TEMPORARY */}
+        <Route path="/listings" element={<ListingsPage />} />
         <Route path="/sign-in" element={<SignInPage />} />
       </Routes>
     </>
