@@ -298,6 +298,16 @@ body {
     border-radius: 5px;
 }
 
+.mission-section {
+    margin-top: 50px; 
+    padding: 20px; 
+}
+
+.mission-section p {
+    margin-top: 20px; 
+}
+
+
 /* Team Section */
 .team-section {
     margin-top: 60px;
@@ -392,6 +402,18 @@ body {
 
 .clear-btn:hover {
     background-color: #555;
+}
+
+.genre-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Adjust spacing between checkboxes */
+}
+
+.genre-filter label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between checkbox and text */
 }
 
 
