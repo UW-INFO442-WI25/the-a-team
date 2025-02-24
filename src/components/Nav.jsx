@@ -29,7 +29,6 @@ export function NavBar() {
           <NavLink to="/" className="nav-item">Home</NavLink>
           <NavLink to="/about" className="nav-item">About</NavLink>
           <NavLink to="/search" className="nav-item">Search</NavLink>
-          <NavLink to="/test" className="nav-item">Test</NavLink>
           <NavLink to="/sign-in" className="nav-item">Sign In</NavLink>
         </div>
       </div>
