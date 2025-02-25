@@ -1,36 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import apartmentListings from './apartmentData'; 
 
-const apartmentListings = [
-    {
-        id: 1,
-        name: "Ori On The Ave",
-        address: "5263 University Way NE, Seattle, WA 98105",
-        units: "Studio apartments",
-        price: "$1,538–$1,934 per month",
-        rating: 4.5,
-        genres: ["Studio", "Budget-Friendly"],
-    },
-    {
-        id: 2,
-        name: "Arista Catering",
-        address: "4715 25th Ave NE, Seattle, WA 98105",
-        units: "Studio to 3-bedroom apartments",
-        price: "$2,035–$14,805 per month",
-        rating: 4.0,
-        genres: ["Luxury", "Family-Friendly"],
-    },
-    {
-        id: 3,
-        name: "The M Seattle",
-        address: "4700 Brooklyn Ave NE, Seattle, WA 98105",
-        units: "Studio to 4-bedroom apartments",
-        price: "$1,350–$2,695 per month",
-        rating: 3.5,
-        genres: ["Studio", "Affordable"],
-    },
-];
 
 const genres = ["Studio", "Luxury", "Budget-Friendly", "Family-Friendly", "Affordable"];
+
 
 export function Search() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -111,7 +85,9 @@ export function Search() {
                 {filteredResults.length > 0 ? (
                     filteredResults.map((listing) => (
                         <div key={listing.id} className="listing-card">
-                            <h2>{listing.name}</h2>
+                            <h2>
+                            <Link to={`/apartment/${listing.id}`}>{listing.name}</Link>
+                            </h2>
                             <p>{listing.address}</p>
                             <p>{listing.units}</p>
                             <p>{listing.price}</p>
