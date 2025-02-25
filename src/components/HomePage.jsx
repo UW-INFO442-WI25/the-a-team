@@ -45,7 +45,6 @@ export function HomePage(props) {
                                                     ? listing.propertyName
                                                     : listing.location.streetAddress}
                                             </span>
-                                            <span className="heart-icon">♡</span>
                                         </div>
                                         <div className="listing-details">
                                             <p>Address: {listing.location.streetAddress}</p>
