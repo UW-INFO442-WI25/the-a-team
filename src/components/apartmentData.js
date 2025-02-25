@@ -7,6 +7,19 @@ const apartmentListings = [
         price: "$1,538–$1,934 per month",
         rating: 4.5,
         genres: ["Studio", "Budget-Friendly"],
+        amenities: [
+            "BBQ & Fire Pit",
+            "24-hrs Surveillance Security",
+            "Rooftop Deck", 
+            "Balcony Patio",  
+            "Club Room",
+            "Conference Room",
+            "Pet-friendly",
+            "Bike Room",                      
+            "Full Kitchenettes",
+            "In-unit WD",                                                      
+            ],
+        location:"Ori on the Ave is an apartment community located in King County and the 98105 ZIP Code. This area is served by the Seattle Public Schools attendance zone."
     },
     {
         id: 2,
@@ -16,6 +29,33 @@ const apartmentListings = [
         price: "$2,035–$14,805 per month",
         rating: 4.0,
         genres: ["Luxury", "Family-Friendly"],
+        amenities: [
+            "Concierge",
+            "Roof Terrace",
+            "Grill",
+            "Package Service",
+            "Maintenance on site",
+            "Property Manager on Site",
+            "Concierge",
+            "Guest Apartment",
+            "Pet Play Area",
+            "Pet Washing Station",
+            "Lounge",
+            "Multi Use Room",
+            "Sauna",
+            "Spa",
+            "Bicycle Storage",
+            "Roof Terrace",
+            "Courtyard",
+            "Grill",
+            "In-Unit Washer/Dryer",
+            "Walk-In Closets",
+            "Island Kitchen",
+            "Double Vanities",
+            "Dishwasher",
+            "Balcony"
+        ]
+        
     },
     {
         id: 3,

@@ -1,7 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import apartmentListings from './apartmentData'; 
-import { Navigate } from 'react-router-dom';
 
 const ApartmentDescription = () => {
     const { id } = useParams(); // Get ID from URL
@@ -15,11 +14,44 @@ const ApartmentDescription = () => {
     console.log(apartmentListings)
 
     return (
-        <div>
-            <h1>{apartment.name}</h1>
-            <p><strong>Address:</strong> {apartment.address}</p>
-            <p><strong>Amenities:</strong> {apartment.amenities}</p>
-            <p><strong>Location:</strong> {apartment.location}</p>
+        <div className="apartment-container">
+            {/* Apartment Header */}
+            <div className="apartment-header">
+                <h1>{apartment.name}</h1>
+                <p><strong>Address:</strong> {apartment.address}</p>
+                <p><strong>Type:</strong> {apartment.genres}</p>
+                <p><strong>Location:</strong> {apartment.location}</p>
+                <p><strong>Price:</strong> {apartment.price}</p>
+             </div>   
+
+            {/* Apartment Details */} 
+            <div className="amenities">
+                <h2>Amenities</h2>
+                    <ul>
+                        {apartment.amenities.map((amenity, index) => (
+                            <li key={index}>{amenity}</li>
+                        ))}
+                    </ul>
+            </div>
+
+            {/* Reviews Section
+            <div className="reviews">
+                <h2>Reviews</h2>
+                    <div className="review-cards">
+                        {apartment.reviews.length > 0 ? (
+                            apartment.reviews.map((review, index) => (
+                                <div key={index} className="review-card">
+                                    <p>"{review.comment}"</p>
+                                    <p className="review-author">- {review.author}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No reviews yet.</p>
+                        )}
+                </div>
+            </div>    */}
+
+
 
         </div>
     );
