@@ -4,7 +4,6 @@ import MapComponent from './Map';
 export function HomePage(props) {
     const { listings } = props;
 
-    // Replace "bd" with "bed" and remove if "Studio" is listed before
     const formatUnits = (units) => {
         if (!units) return '';
         let formattedUnits = units.replace(/\bbd\b/g, 'bed');
@@ -16,13 +15,10 @@ export function HomePage(props) {
         return formattedUnits.split(' ').join(' ');
     };
 
-    // Format rent display
     const formatRent = (rent) => {
         if (!rent || !rent.min || !rent.max) return '';
         return `$${rent.min} - $${rent.max} per month`;
     };
-    
-    
 
     return (
         <>
@@ -38,7 +34,7 @@ export function HomePage(props) {
                         </div>
 
                         {listings
-                            .filter((listing) => listing.location.streetAddress && listing.location.streetAddress !== "Seattle") // Filter out listings with "Seattle" or no address
+                            .filter((listing) => listing.location.streetAddress && listing.location.streetAddress !== "Seattle")
                             .map((listing) => (
                                 <div key={listing.id} className="listing-card">
                                     <div className="listing-image"></div>
@@ -66,13 +62,12 @@ export function HomePage(props) {
                     </div>
 
                     <div className="map-container">
-                        <MapComponent />
+                        <MapComponent listings={listings} />
                     </div>
                 </div>
-
             </main>
         </>
     );
 }
 
-export default HomePage
+export default HomePage;
