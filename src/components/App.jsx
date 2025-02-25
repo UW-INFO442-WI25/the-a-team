@@ -5,6 +5,7 @@ import { HomePage } from './HomePage';
 import { AboutPage } from './AboutPage';
 import { Search } from './Search';
 import { SignInPage } from './SignInPage';
+import ApartmentDescription from './ApartmentDescription';
 import { NavBar } from './Nav';
 
 // Dataset
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search" element={<Search />} /> 
         <Route path="/sign-in" element={<SignInPage />} />
+        <Route path="/apartment/:id" element={<ApartmentDescription />} />
       </Routes>
     </>
     
