@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function ListingPage(props) {
     const { listings } = props;
@@ -47,49 +48,29 @@ export function ListingPage(props) {
     return (
         <div className="apartment-container">
             {/* Apartment Header */}
-            <div className="apartment-image">
-                <img src={apartment.img} alt={apartment.propertyName} />
-            </div>
+            <div className="apartment-header">
+                <div className="apartment-image">
+                    <img src={apartment.img} alt={apartment.propertyName} />
+                </div>
 
-            {/* Apartment Amenities */}
-            <div className="amenities">
-                <h2>Amenities</h2>
-                {amenitiesList}
-            </div>
-
-            {/* Apartment Details */}
-            <div className="apartment-details">
-                <div className="apartment-header">
+                <div className="apartment-attributes">
+                    {/* Apartment Details */}
                     <h1>{apartment.propertyName}</h1>
                     <p><strong>Address:</strong> {apartment.location.streetAddress}</p>
                     <p><strong>Units:</strong> {formatUnits(apartment.beds)}</p>
                     <p><strong>Location:</strong> {apartment.location.city}, {apartment.location.state}</p>
                     <p><strong>Rent:</strong> {formatRent(apartment.rent)}</p>
                 </div>
+            </div>
 
+            <div className="apartment-details">
                 {/* Apartment Amenities */}
                 <div className="amenities">
                     <h2>Amenities</h2>
                     {amenitiesList}
                 </div>
-            
-                {/* Reviews Section
-                <div className="reviews">
-                    <h2>Reviews</h2>
-                        <div className="review-cards">
-                            {apartment.reviews.length > 0 ? (
-                                apartment.reviews.map((review, index) => (
-                                    <div key={index} className="review-card">
-                                        <p>"{review.comment}"</p>
-                                        <p className="review-author">- {review.author}</p>
-                                    </div>
-                                ))
-                            ) : (
-                                <p>No reviews yet.</p>
-                            )}
-                    </div>
-                </div>    */}
             </div>
+            <Link to={apartment.url} className="see-more-btn">Apply Now</Link>
         </div>
     )
 };

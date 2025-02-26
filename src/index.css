@@ -292,13 +292,6 @@ body {
     flex: 1;
 }
 
-.apartment-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
 .mission-section {
     margin-top: 50px; 
     padding: 20px; 
@@ -565,28 +558,23 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
-    display: flex;
+    /* display: flex; */
     gap: 20px;
     align-items: flex-start;
 }
 
 /* Apartment Image */
-.apartment-image {
-    top: 0;
-    right: 0;
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-}
-
 
 .apartment-image img {
-    width: 100%;
+    max-width: 400px;
+    padding-bottom: 10px;
     border-radius: 8px;
-    object-fit: cover;
 }
 
 /* Apartment Details */
 .apartment-header {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     max-width: 100%;
 }
@@ -602,6 +590,11 @@ body {
     color: #555;
     line-height: 1.5;
     margin-bottom: 8px;
+}
+
+.apartment-details {
+    width: 100%;
+    display: flex;
 }
 
 /* Amenities Section */

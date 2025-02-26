@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import MapComponent from './Map';
 import { Link } from 'react-router-dom';
-import apartmentListings from './apartmentData'; 
+import apartmentListings from './apartmentData';
 
 export function HomePage(props) {
-    const { listings = apartmentListings } = props; 
+    const { listings = apartmentListings } = props;
     const ITEMS_PER_PAGE = 3;
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
@@ -15,7 +15,7 @@ export function HomePage(props) {
         let formattedUnits = units.replace(/\bbd\b/g, 'bed');
         return formattedUnits.includes('Studio bed') ? formattedUnits.replace('Studio bed', 'Studio') : formattedUnits;
     };
-    
+
     const formatRent = (rent) => (!rent || !rent.min || !rent.max ? '' : `$${rent.min} - $${rent.max} per month`);
 
     const handleSearch = (query) => {
@@ -30,7 +30,7 @@ export function HomePage(props) {
 
     const filteredListings = listings
         .filter((listing) => listing.location.streetAddress && listing.location.streetAddress !== "Seattle")
-        .filter((listing) => 
+        .filter((listing) =>
             searchQuery === "" ||
             listing.propertyName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.location.streetAddress?.toLowerCase().includes(searchQuery.toLowerCase())
@@ -45,7 +45,7 @@ export function HomePage(props) {
         setCurrentPage(pageNumber);
         window.scrollTo(0, 0);
     };
-    
+
     return (
         <>
             <main>

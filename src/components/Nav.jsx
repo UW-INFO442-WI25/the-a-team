@@ -28,7 +28,6 @@ export function NavBar() {
         <div className="nav-links">
           <NavLink to="/" className="nav-item">Home</NavLink>
           <NavLink to="/about" className="nav-item">About</NavLink>
-          <NavLink to="/sign-in" className="nav-item">Sign In</NavLink>
         </div>
       </div>
 
@@ -36,7 +35,6 @@ export function NavBar() {
       <div className={`nav-links-mobile ${hamburgerOpen ? 'active' : ''}`}>
         <NavLink to="/" className="nav-item-mobile">Home</NavLink>
         <NavLink to="/about" className="nav-item-mobile">About</NavLink>
-        <NavLink to="/sign-in" className="nav-item-mobile">Sign In</NavLink>
       </div>
     </>
   );

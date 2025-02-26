@@ -37,8 +37,8 @@ const getListingTitle = (listing) => {
 
 const MapComponent = ({ listings = [] }) => {
   const [selectedListing, setSelectedListing] = useState(null);
-  const [mapCenter, setMapCenter] = useState([47.6062, -122.3321]);
-  const [mapZoom, setMapZoom] = useState(12);
+  const [mapCenter, setMapCenter] = useState([47.663011, -122.314170]);
+  const [mapZoom, setMapZoom] = useState(15);
   
   const listingsWithCoordinates = listings.filter(listing => {
     return (
