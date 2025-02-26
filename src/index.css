@@ -571,10 +571,12 @@ body {
 
 /* Apartment Image */
 .apartment-image {
-    width: 80%;
-    height: 500px;
-    background-color: #ddd;
+    top: 0;
+    right: 0;
+    width: 200px; /* Adjust size as needed */
+    height: auto;
 }
+
 
 .apartment-image img {
     width: 100%;

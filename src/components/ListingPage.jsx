@@ -61,22 +61,10 @@ export function ListingPage(props) {
                 {amenitiesList}
             </div>
 
-            {/* Reviews Section
-            <div className="reviews">
-                <h2>Reviews</h2>
-                    <div className="review-cards">
-                        {apartment.reviews.length > 0 ? (
-                            apartment.reviews.map((review, index) => (
-                                <div key={index} className="review-card">
-                                    <p>"{review.comment}"</p>
-                                    <p className="review-author">- {review.author}</p>
-                                </div>
-                            ))
-                        ) : (
-                            <p>No reviews yet.</p>
-                        )}
-                </div>
-            </div>    */}
+            {/* Apartment Image */}
+            <div className="apartment-image">
+                <img src={apartment.img} alt={apartment.propertyName} />
+            </div>
         </div>
     );
 };

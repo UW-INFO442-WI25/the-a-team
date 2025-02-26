@@ -9,6 +9,7 @@
     "Roosevelt",
     "Kale Studios"
   ],
+  "img": "../public/img/kalestudios.jpg",
   "lastUpdated": "4 Days Ago",
   "location": {
     "fullAddress": "6400 8th Ave NE, Seattle, WA 98115",
@@ -725,6 +726,7 @@
     "University District",
     "Avenida by aPodment Suites"
   ],
+  "img": "../public/img/avenida.jpg",
   "lastUpdated": "4 Days Ago",
   "location": {
     "fullAddress": "4047 8th Ave NE, Seattle, WA 98105",
@@ -1329,6 +1331,7 @@
     "University District",
     "Cielo"
   ],
+  "img": "../public/img/cielo.jpg",
   "lastUpdated": "5 Days Ago",
   "location": {
     "fullAddress": "4520 7th Ave NE, Seattle, WA 98105",
