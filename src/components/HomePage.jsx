@@ -53,7 +53,7 @@ export function HomePage(props) {
                                             <p>Rent: {formatRent(listing.rent)}</p>
                                         </div>
                                         <div className="listing-price">{listing.price}</div>
-                                        <Link to={`/apartment/${listing.id}`} className="see-more-btn">See More</Link>
+                                        <Link to={`/listing/${listing.id}`} className="see-more-btn">See More</Link>
                                     </div>
                                 </div>
                             ))}

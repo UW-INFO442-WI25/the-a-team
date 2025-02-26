@@ -1,37 +1,64 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import apartmentListings from './apartmentData'; 
 
-export function ListingPage() {
+export function ListingPage(props) {
+    const { listings } = props;
     const { id } = useParams(); // Get ID from URL
 
-    if (!id) return <Navigate to = "/search" />;
-    const apartment = apartmentListings.find((apt) => apt.id === Number(id));
+    if (!id) return <Navigate to="/" />;
+
+    const apartment = listings.find((apt) => apt.id === id);
 
     if (!apartment) {
         return <h2>Apartment not found</h2>;
     }
-    console.log(apartmentListings)
+
+    const formatUnits = (units) => {
+        if (!units) return '';
+        let formattedUnits = units.replace(/\bbd\b/g, 'bed');
+
+        if (formattedUnits.includes('Studio bed')) {
+            formattedUnits = formattedUnits.replace('Studio bed', 'Studio');
+        }
+
+        return formattedUnits.split(' ').join(' ');
+    };
+
+    const formatRent = (rent) => {
+        if (!rent || !rent.min || !rent.max) return '';
+        return `$${rent.min} - $${rent.max} per month`;
+    };
+
+    const amenitiesList = apartment.amenities && apartment.amenities.length > 0 ? (
+        apartment.amenities.map((amenity, index) => (
+            <div key={index}>
+                <h3>{amenity.title}</h3>
+                <ul>
+                    {amenity.value.map((feature, featureIndex) => (
+                        <li key={featureIndex}>{feature}</li>
+                    ))}
+                </ul>
+            </div>
+        ))
+    ) : (
+        <p>No amenities listed.</p>
+    );
 
     return (
         <div className="apartment-container">
             {/* Apartment Header */}
             <div className="apartment-header">
-                <h1>{apartment.name}</h1>
-                <p><strong>Address:</strong> {apartment.address}</p>
-                <p><strong>Type:</strong> {apartment.genres}</p>
-                <p><strong>Location:</strong> {apartment.location}</p>
-                <p><strong>Price:</strong> {apartment.price}</p>
-             </div>   
+                <h1>{apartment.propertyName}</h1>
+                <p><strong>Address:</strong> {apartment.location.streetAddress}</p>
+                <p><strong>Units:</strong> {formatUnits(apartment.beds)}</p>
+                <p><strong>Location:</strong> {apartment.location.city}, {apartment.location.state}</p>
+                <p><strong>Rent:</strong> {formatRent(apartment.rent)}</p>
+            </div>
 
-            {/* Apartment Details */} 
+            {/* Apartment Amenities */}
             <div className="amenities">
                 <h2>Amenities</h2>
-                    <ul>
-                        {apartment.amenities.map((amenity, index) => (
-                            <li key={index}>{amenity}</li>
-                        ))}
-                    </ul>
+                {amenitiesList}
             </div>
 
             {/* Reviews Section

@@ -57,34 +57,39 @@ const MapComponent = ({ listings = [] }) => {
     if (listingsWithCoordinates.length > 0) {
       let sumLat = 0;
       let sumLng = 0;
-      
+  
       listingsWithCoordinates.forEach(listing => {
-        const lat = listing.coordinates ? 
-          listing.coordinates.latitude : 
-          parseFloat(listing.location.latitude);
-          
-        const lng = listing.coordinates ? 
-          listing.coordinates.longitude : 
-          parseFloat(listing.location.longitude);
-          
+        const lat = listing.coordinates 
+          ? listing.coordinates.latitude 
+          : parseFloat(listing.location.latitude);
+        
+        const lng = listing.coordinates 
+          ? listing.coordinates.longitude 
+          : parseFloat(listing.location.longitude);
+        
         sumLat += lat;
         sumLng += lng;
       });
-      
+  
       const avgLat = sumLat / listingsWithCoordinates.length;
       const avgLng = sumLng / listingsWithCoordinates.length;
-      
-      setMapCenter([avgLat, avgLng]);
-      
-      if (listingsWithCoordinates.length === 1) {
-        setMapZoom(15);
-      } else if (listingsWithCoordinates.length < 5) {
-        setMapZoom(14);
-      } else if (listingsWithCoordinates.length < 20) {
-        setMapZoom(13);
-      } else {
-        setMapZoom(12);
-      }
+  
+      // only update state if values have changed
+      setMapCenter(prevCenter => {
+        const newCenter = [avgLat, avgLng];
+        return prevCenter[0] !== newCenter[0] || prevCenter[1] !== newCenter[1] 
+          ? newCenter 
+          : prevCenter;
+      });
+  
+      setMapZoom(prevZoom => {
+        let newZoom = 12;
+        if (listingsWithCoordinates.length === 1) newZoom = 15;
+        else if (listingsWithCoordinates.length < 5) newZoom = 14;
+        else if (listingsWithCoordinates.length < 20) newZoom = 13;
+  
+        return prevZoom !== newZoom ? newZoom : prevZoom;
+      });
     }
   }, [listingsWithCoordinates]);
   
