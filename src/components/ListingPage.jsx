@@ -47,12 +47,8 @@ export function ListingPage(props) {
     return (
         <div className="apartment-container">
             {/* Apartment Header */}
-            <div className="apartment-header">
-                <h1>{apartment.propertyName}</h1>
-                <p><strong>Address:</strong> {apartment.location.streetAddress}</p>
-                <p><strong>Units:</strong> {formatUnits(apartment.beds)}</p>
-                <p><strong>Location:</strong> {apartment.location.city}, {apartment.location.state}</p>
-                <p><strong>Rent:</strong> {formatRent(apartment.rent)}</p>
+            <div className="apartment-image">
+                <img src={apartment.img} alt={apartment.propertyName} />
             </div>
 
             {/* Apartment Amenities */}
@@ -61,10 +57,39 @@ export function ListingPage(props) {
                 {amenitiesList}
             </div>
 
-            {/* Apartment Image */}
-            <div className="apartment-image">
-                <img src={apartment.img} alt={apartment.propertyName} />
+            {/* Apartment Details */}
+            <div className="apartment-details">
+                <div className="apartment-header">
+                    <h1>{apartment.propertyName}</h1>
+                    <p><strong>Address:</strong> {apartment.location.streetAddress}</p>
+                    <p><strong>Units:</strong> {formatUnits(apartment.beds)}</p>
+                    <p><strong>Location:</strong> {apartment.location.city}, {apartment.location.state}</p>
+                    <p><strong>Rent:</strong> {formatRent(apartment.rent)}</p>
+                </div>
+
+                {/* Apartment Amenities */}
+                <div className="amenities">
+                    <h2>Amenities</h2>
+                    {amenitiesList}
+                </div>
+            
+                {/* Reviews Section
+                <div className="reviews">
+                    <h2>Reviews</h2>
+                        <div className="review-cards">
+                            {apartment.reviews.length > 0 ? (
+                                apartment.reviews.map((review, index) => (
+                                    <div key={index} className="review-card">
+                                        <p>"{review.comment}"</p>
+                                        <p className="review-author">- {review.author}</p>
+                                    </div>
+                                ))
+                            ) : (
+                                <p>No reviews yet.</p>
+                            )}
+                    </div>
+                </div>    */}
             </div>
         </div>
-    );
+    )
 };
