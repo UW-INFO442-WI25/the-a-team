@@ -5,46 +5,29 @@ import apartmentListings from './apartmentData';
 
 export function HomePage(props) {
     const { listings = apartmentListings } = props; 
-    
-    // Set items per page to exactly 3
     const ITEMS_PER_PAGE = 3;
-    
-    // State to track current page
     const [currentPage, setCurrentPage] = useState(1);
-    
-    // Search and Rating Filter States
     const [searchQuery, setSearchQuery] = useState("");
-    const [minRating, setMinRating] = useState(0); // Default to 0 (show all listings)
+    const [minRating, setMinRating] = useState(0);
 
     const formatUnits = (units) => {
         if (!units) return '';
         let formattedUnits = units.replace(/\bbd\b/g, 'bed');
-        
-        if (formattedUnits.includes('Studio bed')) {
-            formattedUnits = formattedUnits.replace('Studio bed', 'Studio');
-        }
-        
-        return formattedUnits.split(' ').join(' ');
+        return formattedUnits.includes('Studio bed') ? formattedUnits.replace('Studio bed', 'Studio') : formattedUnits;
     };
     
-    const formatRent = (rent) => {
-        if (!rent || !rent.min || !rent.max) return '';
-        return `$${rent.min} - $${rent.max} per month`;
-    };
+    const formatRent = (rent) => (!rent || !rent.min || !rent.max ? '' : `$${rent.min} - $${rent.max} per month`);
 
-    // Search Function
     const handleSearch = (query) => {
         setSearchQuery(query);
-        setCurrentPage(1); // Reset to page 1 when searching
+        setCurrentPage(1);
     };
 
-    // Handle Rating Filter Change
     const handleRatingChange = (event) => {
         setMinRating(Number(event.target.value));
-        setCurrentPage(1); // Reset to page 1 when filtering
+        setCurrentPage(1);
     };
 
-    // Filter listings
     const filteredListings = listings
         .filter((listing) => listing.location.streetAddress && listing.location.streetAddress !== "Seattle")
         .filter((listing) => 
@@ -52,20 +35,15 @@ export function HomePage(props) {
             listing.propertyName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.location.streetAddress?.toLowerCase().includes(searchQuery.toLowerCase())
         )
-        .filter((listing) => listing.rating >= minRating); // Apply rating filter
+        .filter((listing) => listing.rating >= minRating);
 
-    // Calculate pagination values
     const totalPages = Math.ceil(filteredListings.length / ITEMS_PER_PAGE);
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    
-    // Get only the listings for the current page
-    const currentListings = filteredListings.slice(startIndex, endIndex);
-    
-    // Handle page change
+    const currentListings = filteredListings.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
-        window.scrollTo(0, 0); // Scroll to top when changing pages
+        window.scrollTo(0, 0);
     };
     
     return (
@@ -73,8 +51,6 @@ export function HomePage(props) {
             <main>
                 <div className="container">
                     <div className="listings">
-                        
-                        {/* Search Bar */}
                         <input
                             type="text"
                             className="search-bar"
@@ -82,14 +58,10 @@ export function HomePage(props) {
                             value={searchQuery}
                             onChange={(e) => handleSearch(e.target.value)}
                         />
-                        
-                        {/* Filters */}
                         <div className="filters">
                             <button className="filter-btn">Price</button>
                             <button className="filter-btn">Location</button>
                             <button className="filter-btn">Bedrooms</button>
-
-                            {/* Rating Filter */}
                             <select className="filter-btn" value={minRating} onChange={handleRatingChange}>
                                 <option value="0">All Ratings</option>
                                 <option value="1">1 Star & Up</option>
@@ -99,7 +71,6 @@ export function HomePage(props) {
                                 <option value="5">5 Stars Only</option>
                             </select>
                         </div>
-                        
                         {currentListings.length > 0 ? (
                             currentListings.map((listing) => (
                                 <div key={listing.id} className="listing-card">
@@ -118,7 +89,6 @@ export function HomePage(props) {
                                             <p>Rent: {formatRent(listing.rent)}</p>
                                             <p>Rating: {listing.rating} ⭐</p>
                                         </div>
-                                        <div className="listing-price">{listing.price}</div>
                                         <Link to={`/listing/${listing.id}`} className="see-more-btn">See More</Link>
                                     </div>
                                 </div>
@@ -126,22 +96,36 @@ export function HomePage(props) {
                         ) : (
                             <p className="no-results">No listings match your search criteria.</p>
                         )}
-                        
                         {totalPages > 1 && filteredListings.length > 0 && (
                             <div className="pagination">
-                                {Array.from({ length: totalPages }, (_, i) => (
-                                    <button
-                                        key={i + 1}
-                                        onClick={() => handlePageChange(i + 1)}
-                                        className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`}
-                                    >
-                                        {i + 1}
-                                    </button>
-                                ))}
+                                <button onClick={() => handlePageChange(Math.max(1, currentPage - 1))} disabled={currentPage === 1} className="page-btn prev-btn">&laquo;</button>
+                                {(() => {
+                                    const MAX_VISIBLE_PAGES = 5;
+                                    const pageNumbers = [];
+                                    let startPage = Math.max(1, currentPage - Math.floor(MAX_VISIBLE_PAGES / 2));
+                                    let endPage = Math.min(totalPages, startPage + MAX_VISIBLE_PAGES - 1);
+                                    if (endPage - startPage + 1 < MAX_VISIBLE_PAGES) {
+                                        startPage = Math.max(1, endPage - MAX_VISIBLE_PAGES + 1);
+                                    }
+                                    if (startPage > 1) {
+                                        pageNumbers.push(<button key={1} onClick={() => handlePageChange(1)} className="page-btn">1</button>);
+                                        if (startPage > 2) pageNumbers.push(<span key="ellipsis1" className="page-ellipsis">...</span>);
+                                    }
+                                    for (let i = startPage; i <= endPage; i++) {
+                                        pageNumbers.push(
+                                            <button key={i} onClick={() => handlePageChange(i)} className={`page-btn ${currentPage === i ? 'active' : ''}`}>{i}</button>
+                                        );
+                                    }
+                                    if (endPage < totalPages) {
+                                        if (endPage < totalPages - 1) pageNumbers.push(<span key="ellipsis2" className="page-ellipsis">...</span>);
+                                        pageNumbers.push(<button key={totalPages} onClick={() => handlePageChange(totalPages)} className="page-btn">{totalPages}</button>);
+                                    }
+                                    return pageNumbers;
+                                })()}
+                                <button onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))} disabled={currentPage === totalPages} className="page-btn next-btn">&raquo;</button>
                             </div>
                         )}
                     </div>
-                    
                     <div className="map-container">
                         <MapComponent listings={filteredListings} />
                     </div>
