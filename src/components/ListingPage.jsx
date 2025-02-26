@@ -63,6 +63,7 @@ export function ListingPage(props) {
                 </div>
             </div>
 
+
             <div className="apartment-details">
                 {/* Apartment Amenities */}
                 <div className="amenities">
@@ -70,6 +71,8 @@ export function ListingPage(props) {
                     {amenitiesList}
                 </div>
             </div>
+            <Link to={"/"} className="back-btn">Back</Link>
+
             <Link to={apartment.url} className="see-more-btn">Apply Now</Link>
         </div>
     )
