@@ -203,16 +203,6 @@ body {
     margin-top: 20px;
 }
 
-.marker-btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
 /* ABOUT PAGE */
 
 .about-page {
@@ -426,22 +416,6 @@ body {
     gap: 5px; /* Space between checkbox and text */
 }
 
-/* Apartment Description Page Styling */
-.apartment-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.apartment-header {
-    text-align: center;
-    margin-bottom: 20px;
-    flex-direction: column;
-    gap: 8px; 
-}
 
 @media (min-width: 768px) {
     /* NAV BAR */
@@ -578,5 +552,109 @@ body {
     .page-btn {
         padding: 6px 10px;
         font-size: 13px;
+    }
+}
+
+/* the listing page */
+.apartment-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Apartment Image */
+.apartment-image {
+    width: 80%;
+    height: 500px;
+    background-color: #ddd;
+}
+
+.apartment-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Apartment Details */
+.apartment-header {
+    flex: 1;
+    max-width: 100%;
+}
+
+.apartment-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.apartment-header p {
+    font-size: 1.0rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* Amenities Section */
+.amenities {
+    flex: 1;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.amenities h2 {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.amenities div {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.amenities h3 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.amenities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.amenities ul li {
+    font-size: 1rem;
+    color: #666;
+    padding: 2px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .apartment-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apartment-image,
+    .apartment-header {
+        max-width: 100%;
+    }
+
+    .apartment-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .apartment-header p {
+        font-size: 1rem;
     }
 }
