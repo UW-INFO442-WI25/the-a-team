@@ -18,7 +18,7 @@ export function AboutPage() {
             name: 'Maya Lukalapu',
             role: 'Project Manager',
             bgColor: '#FFE6E6',
-            image: '/img/maya.jpg'
+            image: '/img/maya.png'
         },
         {
             name: 'Nandita Raman',
