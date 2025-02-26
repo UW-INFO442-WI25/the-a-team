@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import apartmentListings from './apartmentData'; 
 
-const ApartmentDescription = () => {
+export function ListingPage() {
     const { id } = useParams(); // Get ID from URL
 
     if (!id) return <Navigate to = "/search" />;
@@ -50,12 +50,6 @@ const ApartmentDescription = () => {
                         )}
                 </div>
             </div>    */}
-
-
-
         </div>
     );
-
 };
-
-export default ApartmentDescription;

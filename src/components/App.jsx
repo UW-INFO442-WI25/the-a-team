@@ -3,9 +3,8 @@ import 'leaflet/dist/leaflet.css';
 import { Routes, Route } from 'react-router-dom';
 import { HomePage } from './HomePage';
 import { AboutPage } from './AboutPage';
-import { Search } from './Search';
 import { SignInPage } from './SignInPage';
-import ApartmentDescription from './ApartmentDescription';
+import { ListingPage } from './ListingPage';
 import { NavBar } from './Nav';
 
 // Dataset
@@ -25,9 +24,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage listings={aptData}/>} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/search" element={<Search />} /> 
         <Route path="/sign-in" element={<SignInPage />} />
-        <Route path="/apartment/:id" element={<ApartmentDescription />} />
+        <Route path="/apartment/:id" element={<ListingPage />} />
       </Routes>
     </>
     

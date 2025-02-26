@@ -1,5 +1,6 @@
 import React from 'react';
 import MapComponent from './Map';
+import { Link } from 'react-router-dom';
 
 export function HomePage(props) {
     const { listings } = props;
@@ -7,7 +8,7 @@ export function HomePage(props) {
     const formatUnits = (units) => {
         if (!units) return '';
         let formattedUnits = units.replace(/\bbd\b/g, 'bed');
-    
+
         if (formattedUnits.includes('Studio bed')) {
             formattedUnits = formattedUnits.replace('Studio bed', 'Studio');
         }
@@ -52,7 +53,7 @@ export function HomePage(props) {
                                             <p>Rent: {formatRent(listing.rent)}</p>
                                         </div>
                                         <div className="listing-price">{listing.price}</div>
-                                        <a href="#" className="see-more-btn">See More</a>
+                                        <Link to={`/apartment/${listing.id}`} className="see-more-btn">See More</Link>
                                     </div>
                                 </div>
                             ))}
@@ -68,5 +69,3 @@ export function HomePage(props) {
         </>
     );
 }
-
-export default HomePage;
