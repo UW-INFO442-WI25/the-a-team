@@ -74,7 +74,9 @@ export function HomePage(props) {
                         {currentListings.length > 0 ? (
                             currentListings.map((listing) => (
                                 <div key={listing.id} className="listing-card">
-                                    <div className="listing-image"></div>
+                                    <div>
+                                        <img src={listing.photos[0]} alt="Apartment image" className="listing-image"></img>
+                                    </div>
                                     <div className="listing-content">
                                         <div className="listing-title">
                                             <span>
