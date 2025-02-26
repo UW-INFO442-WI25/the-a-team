@@ -203,6 +203,16 @@ body {
     margin-top: 20px;
 }
 
+.marker-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
 /* ABOUT PAGE */
 
 .about-page {

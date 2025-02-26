@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Link } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -137,22 +138,7 @@ const MapComponent = ({ listings = [] }) => {
                   {listing.rent && (
                     <p><strong>Rent:</strong> {formatRent(listing.rent)}</p>
                   )}
-                  <a 
-                    href="#" 
-                    className="see-more-btn"
-                    style={{ 
-                      display: 'inline-block',
-                      marginTop: '10px',
-                      padding: '5px 10px',
-                      backgroundColor: '#4a90e2',
-                      color: 'white',
-                      textDecoration: 'none',
-                      borderRadius: '4px',
-                      fontSize: '14px'
-                    }}
-                  >
-                    See More
-                  </a>
+                  <Link to={`/listing/${listing.id}`} className="marker-btn" style={{ color: '#FFF' }}>See More</Link>
                 </div>
               </Popup>
             </Marker>
