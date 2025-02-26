@@ -75,7 +75,6 @@ const MapComponent = ({ listings = [] }) => {
       const avgLat = sumLat / listingsWithCoordinates.length;
       const avgLng = sumLng / listingsWithCoordinates.length;
   
-      // only update state if values have changed
       setMapCenter(prevCenter => {
         const newCenter = [avgLat, avgLng];
         return prevCenter[0] !== newCenter[0] || prevCenter[1] !== newCenter[1] 
@@ -138,7 +137,23 @@ const MapComponent = ({ listings = [] }) => {
                   {listing.rent && (
                     <p><strong>Rent:</strong> {formatRent(listing.rent)}</p>
                   )}
-                  <Link to={`/listing/${listing.id}`} className="marker-btn" style={{ color: '#FFF' }}>See More</Link>
+                  <div style={{ marginTop: '15px', textAlign: 'center' }}>
+                    <Link 
+                      to={`/listing/${listing.id}`} 
+                      className="marker-btn" 
+                      style={{ 
+                        display: 'inline-block',
+                        padding: '8px 16px',
+                        backgroundColor: '#333',
+                        color: 'white',
+                        textDecoration: 'none',
+                        borderRadius: '5px',
+                        fontSize: '14px'
+                      }}
+                    >
+                      See More
+                    </Link>
+                  </div>
                 </div>
               </Popup>
             </Marker>
