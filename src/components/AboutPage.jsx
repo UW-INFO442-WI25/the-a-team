@@ -6,7 +6,7 @@ export function AboutPage() {
             name: 'Cindy Susanto',
             role: 'UI/UX Designer',
             bgColor: '#FFE6E6',
-            image: '/img/cindy.jpg'
+            image: '/img/cindy.png'
         },
         {
             name: 'Nathaniel Sayasack',
