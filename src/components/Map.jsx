@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import { Link } from 'react-router-dom';
 import L from 'leaflet';
@@ -6,10 +6,27 @@ import 'leaflet/dist/leaflet.css';
 
 delete L.Icon.Default.prototype._getIconUrl;
 
-L.Icon.Default.mergeOptions({
+// Create two different sized icons for normal and hover states
+const defaultIcon = new L.Icon({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png'
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  tooltipAnchor: [16, -28],
+  shadowSize: [41, 41]
+});
+
+const hoverIcon = new L.Icon({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconSize: [35, 57],
+  iconAnchor: [17, 57],
+  popupAnchor: [1, -34],
+  tooltipAnchor: [16, -28],
+  shadowSize: [41, 41]
 });
 
 const formatUnits = (units) => {
@@ -37,6 +54,7 @@ const getListingTitle = (listing) => {
 
 const MapComponent = ({ listings = [] }) => {
   const [selectedListing, setSelectedListing] = useState(null);
+  const [hoveredMarkerId, setHoveredMarkerId] = useState(null);
   const [mapCenter, setMapCenter] = useState([47.663011, -122.314170]);
   const [mapZoom, setMapZoom] = useState(15);
   
@@ -115,17 +133,27 @@ const MapComponent = ({ listings = [] }) => {
             listing.coordinates.longitude : 
             parseFloat(listing.location.longitude);
           
+          const markerId = listing.id || `marker-${index}`;
+          const isHovered = hoveredMarkerId === markerId;
+          
           return (
             <Marker 
-              key={listing.id || index}
+              key={markerId}
               position={[lat, lng]}
+              icon={isHovered ? hoverIcon : defaultIcon}
               eventHandlers={{
                 click: () => {
                   setSelectedListing(listing);
+                },
+                mouseover: () => {
+                  setHoveredMarkerId(markerId);
+                },
+                mouseout: () => {
+                  setHoveredMarkerId(null);
                 }
               }}
             >
-              <Tooltip direction="top" offset={[0, -20]} opacity={1.0} className="marker-tooltip">
+              <Tooltip direction="top" offset={[0, -20]} className="marker-tooltip">
                 {getListingTitle(listing)}
               </Tooltip>
               
