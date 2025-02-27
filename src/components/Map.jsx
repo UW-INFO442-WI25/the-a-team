@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import { Link } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -122,9 +122,13 @@ const MapComponent = ({ listings = [] }) => {
               eventHandlers={{
                 click: () => {
                   setSelectedListing(listing);
-                },
+                }
               }}
             >
+              <Tooltip direction="top" offset={[0, -20]} opacity={1.0} className="marker-tooltip">
+                {getListingTitle(listing)}
+              </Tooltip>
+              
               <Popup>
                 <div className="popup-content">
                   <h3 style={{ margin: '0 0 8px 0' }}>{getListingTitle(listing)}</h3>
