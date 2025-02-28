@@ -98024,6 +98024,7 @@
   "id": "nrnk99p",
   "propertyName": "50th & Roosevelt",
   "url": "https://www.apartments.com/50th-roosevelt-seattle-wa/nrnk99p/",
+  "img": "../public/img/50th-roosevelt.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -99576,6 +99577,7 @@
   "id": "s0e6b75",
   "propertyName": "Nordheim Court UW Student Apartments",
   "url": "https://www.apartments.com/nordheim-court-uw-student-apartments-seattle-wa/s0e6b75/",
+  "img": "../public/img/nordheim.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -101466,6 +101468,7 @@
   "id": "986xcx6",
   "propertyName": "Clara Apartments",
   "url": "https://www.apartments.com/clara-apartments-seattle-wa/986xcx6/",
+  "img": "../public/img/clara.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -107795,6 +107798,7 @@
   "id": "ft3kt7r",
   "propertyName": "Corner 63",
   "url": "https://www.apartments.com/corner-63-seattle-wa/ft3kt7r/",
+  "img": "../public/img/corner-63.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -112761,6 +112765,7 @@
   "id": "n48pv6m",
   "propertyName": "Trailside",
   "url": "https://www.apartments.com/trailside-seattle-wa/n48pv6m/",
+  "img": "../public/img/trailside.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -119911,6 +119916,7 @@
   "id": "kknd908",
   "propertyName": "Blue Lake Apartments",
   "url": "https://www.apartments.com/blue-lake-apartments-seattle-wa/kknd908/",
+  "img": "../public/img/blue-lake.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -123190,6 +123196,7 @@
   "id": "1bl0g26",
   "propertyName": "Robins Nest",
   "url": "https://www.apartments.com/robins-nest-seattle-wa/1bl0g26/",
+  "img": "../public/img/robins-nest.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -125310,6 +125317,7 @@
   "id": "clvqgvg",
   "propertyName": "Radian Apartments",
   "url": "https://www.apartments.com/radian-apartments-seattle-wa/clvqgvg/",
+  "img": "../public/img/radian.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -125917,6 +125925,7 @@
   "id": "n9485rp",
   "propertyName": "Saint Moritz",
   "url": "https://www.apartments.com/saint-moritz-seattle-wa/n9485rp/",
+  "img": "../public/img/saint-moritz.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -126511,6 +126520,7 @@
   "id": "81gy302",
   "propertyName": "Village Vista Apartments",
   "url": "https://www.apartments.com/village-vista-apartments-seattle-wa/81gy302/",
+  "img": "../public/img/village-vista.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -128828,8 +128838,9 @@
 },
 {
   "id": "ptzndkt",
-  "propertyName": "Husky Court/ Place",
+  "propertyName": "Husky Court/Place",
   "url": "https://www.apartments.com/husky-court-place-seattle-wa/ptzndkt/",
+  "img": "../public/img/husky0court.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -129367,6 +129378,7 @@
   "id": "dgw4wwk",
   "propertyName": "U20 Apartments",
   "url": "https://www.apartments.com/u20-apartments-seattle-wa/dgw4wwk/",
+  "img": "../public/img/u20.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -133920,6 +133932,7 @@
   "id": "lbgnpjg",
   "propertyName": "Augusta Apartments",
   "url": "https://www.apartments.com/augusta-apartments-seattle-wa/lbgnpjg/",
+  "img": "../public/img/augusta.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -138546,6 +138559,7 @@
   "id": "nf2e3dn",
   "propertyName": "Campus View",
   "url": "https://www.apartments.com/campus-view-seattle-wa/nf2e3dn/",
+  "img": "../public/img/campus-view.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -141018,6 +141032,7 @@
   "id": "6c04cst",
   "propertyName": "U Place Apartments",
   "url": "https://www.apartments.com/u-place-apartments-seattle-wa/6c04cst/",
+  "img": "../public/img/uplace.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -142447,6 +142462,7 @@
   "id": "vj0epve",
   "propertyName": "TAS Investments",
   "url": "https://www.apartments.com/tas-investments-seattle-wa/vj0epve/",
+  "img": "../public/img/tas-investments.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -143824,6 +143840,7 @@
   "id": "ktf0f58",
   "propertyName": "The Penrith Apartments",
   "url": "https://www.apartments.com/the-penrith-apartments-seattle-wa/ktf0f58/",
+  "img": "../public/img/penrith.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
@@ -144985,6 +145002,7 @@
   "id": "np3qvbp",
   "propertyName": "Lightbox",
   "url": "https://www.apartments.com/lightbox-seattle-wa/np3qvbp/",
+  "img": "../public/img/lightbox.jpg",
   "breadcrumbs": [
     "Washington",
     "King County",
