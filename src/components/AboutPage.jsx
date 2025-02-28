@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiFillLinkedin } from "react-icons/ai";
 
 export function AboutPage() {
     const teamMembers = [
@@ -6,31 +7,36 @@ export function AboutPage() {
             name: 'Cindy Susanto',
             role: 'UI/UX Designer',
             bgColor: '#FFE6E6',
-            image: '/img/cindy.png'
+            image: '/img/cindy.png',
+            linkedin: 'https://www.linkedin.com/in/cindy-susanto/'
         },
         {
             name: 'Nathaniel Sayasack',
             role: 'Developer',
             bgColor: '#F5E6D3',
-            image: '/img/nathaniel.jpg'
+            image: '/img/nathaniel.jpg',
+            linkedin: 'https://www.linkedin.com/in/nathaniel-sayasack-86488821a/'
         },
         {
             name: 'Maya Lukalapu',
             role: 'Project Manager',
             bgColor: '#FFE6E6',
-            image: '/img/maya.png'
+            image: '/img/maya.png',
+            linkedin: 'https://www.linkedin.com/in/mayalukalapu/'
         },
         {
             name: 'Nandita Raman',
             role: 'Developer',
             bgColor: '#E6F0FF',
-            image: '/img/nandita.jpg'
+            image: '/img/nandita.jpg',
+            linkedin: 'https://www.linkedin.com/in/raman-nandita/'
         },
         {
             name: 'Natalie Olson',
             role: 'Developer',
             bgColor: '#E6FFF9',
-            image: '/img/natalie.jpg'
+            image: '/img/natalie.jpg',
+            linkedin: 'https://www.linkedin.com/in/nataliegolson/'
         }
     ];
 
@@ -46,16 +52,14 @@ export function AboutPage() {
                             </div>
                             <img src="/img/huskyhabitatfavicon.png" alt="Husky Logo" className="husky-logo" />
                         </div>
-                        
+
                         <div className="who-we-are">
                             <h3>Who <span className="highlight">We Are</span></h3>
                             <p>
                                 We are a dedicated platform designed to help students find the perfect 
                                 place to stay with ease and confidence. Whether you're looking for a cozy 
                                 apartment, a shared living space, or student-friendly housing, we connect 
-                                you with trusted options that fit your needs. Our goal is to make the search 
-                                process simple, reliable, and stress-free, so you can focus on what truly 
-                                matters—your studies and your student experience.
+                                you with trusted options that fit your needs.
                             </p>
                         </div>
 
@@ -103,6 +107,17 @@ export function AboutPage() {
                                 <div className="member-info">
                                     <h3>{member.name}</h3>
                                     <p>{member.role}</p>
+                                    {member.linkedin && (
+                                        <a 
+                                            href={member.linkedin} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="linkedin-link"
+                                            aria-label={`${member.name}'s LinkedIn profile`}
+                                        >
+                                            <AiFillLinkedin size={24} color="#0077B5" />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         ))}
@@ -114,9 +129,8 @@ export function AboutPage() {
                     <p>
                         The United Nations' eleventh goal, sustainable cities and communities, 
                         aims to make cities inclusive, safe, resilient, and sustainable. Our project 
-                        focuses on this sustainable development goal in order to help college students 
-                        at the University of Washington find affordable housing options within adequate 
-                        commuting distance to school that fit their needs.
+                        helps college students at the University of Washington find affordable housing 
+                        within commuting distance to school that fits their needs.
                     </p>
                 </div>
             </div>

@@ -328,6 +328,25 @@ body {
 .mission-section p {
     margin-top: 20px; 
 }
+.member-info {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.linkedin-link {
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.linkedin-link:hover {
+    transform: scale(1.2);
+}
+
+.linkedin-link:active {
+    transform: scale(0.95);
+}
 
 
 /* Team Section */
