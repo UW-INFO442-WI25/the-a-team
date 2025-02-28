@@ -53,27 +53,26 @@ export function ListingPage(props) {
                     <img src={apartment.img} alt={apartment.propertyName} />
                 </div>
 
-                <div className="apartment-attributes">
-                    {/* Apartment Details */}
+                <div className="apartment-details">
+                        {/* Apartment Details */}
                     <h1>{apartment.propertyName}</h1>
                     <p><strong>Address:</strong> {apartment.location.streetAddress}</p>
                     <p><strong>Units:</strong> {formatUnits(apartment.beds)}</p>
                     <p><strong>Location:</strong> {apartment.location.city}, {apartment.location.state}</p>
                     <p><strong>Rent:</strong> {formatRent(apartment.rent)}</p>
-                </div>
-            </div>
 
-
-            <div className="apartment-details">
-                {/* Apartment Amenities */}
                 <div className="amenities">
                     <h2>Amenities</h2>
                     {amenitiesList}
                 </div>
-            </div>
-            <Link to={"/"} className="back-btn">Back</Link>
+                
+                    <div className="apartment-actions">
+                        <Link to={"/"} className="back-btn">Back</Link>
 
-            <Link to={apartment.url} className="see-more-btn">Apply Now</Link>
+                        <Link to={apartment.url} className="see-more-btn">Apply Now</Link>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 };

@@ -605,49 +605,58 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     align-items: flex-start;
 }
 
-/* Apartment Image */
+/* Apartment Header - Image on Left, Description on Right */
+.apartment-header {
+    display: flex;
+    flex-direction: row; /* Image on the left, details on the right */
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Apartment Image (Left Side) */
+.apartment-image {
+    flex: 1;
+    max-width: 550px;
+}
 
 .apartment-image img {
-    max-width: 400px;
-    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
-/* Apartment Details */
-.apartment-header {
+/* Apartment Details (Right Side) */
+.apartment-details {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    max-width: 100%;
+    justify-content: flex-start;
+    text-align: left;
 }
 
-.apartment-header h1 {
+.apartment-details h1 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 10px;
 }
 
-.apartment-header p {
-    font-size: 1.0rem;
+.apartment-details p {
+    font-size: 1rem;
     color: #555;
     line-height: 1.5;
     margin-bottom: 8px;
 }
 
-.apartment-details {
-    width: 100%;
-    display: flex;
-}
-
-/* Amenities Section */
+/* Amenities Section (Below the Details) */
 .amenities {
-    flex: 1;
-    max-width: 100%;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -671,8 +680,8 @@ body {
 }
 
 .amenities ul {
-    list-style: none;
-    padding-left: 0;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .amenities ul li {
@@ -683,14 +692,17 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .apartment-container {
+    .apartment-header {
         flex-direction: column;
         align-items: center;
     }
 
-    .apartment-image,
-    .apartment-header {
+    .apartment-image {
         max-width: 100%;
+    }
+
+    .apartment-details {
+        text-align: center;
     }
 
     .apartment-header h1 {
@@ -701,3 +713,10 @@ body {
         font-size: 1rem;
     }
 }
+
+
+
+
+
+
+
