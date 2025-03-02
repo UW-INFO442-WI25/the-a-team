@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import MapComponent from './Map';
 import { Link } from 'react-router-dom';
-import apartmentListings from './apartmentData';
 
 export function HomePage(props) {
     const { listings = apartmentListings } = props;

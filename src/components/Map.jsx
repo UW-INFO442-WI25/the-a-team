@@ -1,32 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
+import React, { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Link } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 delete L.Icon.Default.prototype._getIconUrl;
 
-// Create two different sized icons for normal and hover states
-const defaultIcon = new L.Icon({
+L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  tooltipAnchor: [16, -28],
-  shadowSize: [41, 41]
-});
-
-const hoverIcon = new L.Icon({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-  iconSize: [35, 57],
-  iconAnchor: [17, 57],
-  popupAnchor: [1, -34],
-  tooltipAnchor: [16, -28],
-  shadowSize: [41, 41]
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png'
 });
 
 const formatUnits = (units) => {
@@ -54,9 +37,8 @@ const getListingTitle = (listing) => {
 
 const MapComponent = ({ listings = [] }) => {
   const [selectedListing, setSelectedListing] = useState(null);
-  const [hoveredMarkerId, setHoveredMarkerId] = useState(null);
-  const [mapCenter, setMapCenter] = useState([47.663011, -122.314170]);
-  const [mapZoom, setMapZoom] = useState(15);
+  const [mapCenter, setMapCenter] = useState([47.6062, -122.3321]);
+  const [mapZoom, setMapZoom] = useState(12);
   
   const listingsWithCoordinates = listings.filter(listing => {
     return (
@@ -93,6 +75,7 @@ const MapComponent = ({ listings = [] }) => {
       const avgLat = sumLat / listingsWithCoordinates.length;
       const avgLng = sumLng / listingsWithCoordinates.length;
   
+      // only update state if values have changed
       setMapCenter(prevCenter => {
         const newCenter = [avgLat, avgLng];
         return prevCenter[0] !== newCenter[0] || prevCenter[1] !== newCenter[1] 
@@ -133,30 +116,16 @@ const MapComponent = ({ listings = [] }) => {
             listing.coordinates.longitude : 
             parseFloat(listing.location.longitude);
           
-          const markerId = listing.id || `marker-${index}`;
-          const isHovered = hoveredMarkerId === markerId;
-          
           return (
             <Marker 
-              key={markerId}
+              key={listing.id || index}
               position={[lat, lng]}
-              icon={isHovered ? hoverIcon : defaultIcon}
               eventHandlers={{
                 click: () => {
                   setSelectedListing(listing);
                 },
-                mouseover: () => {
-                  setHoveredMarkerId(markerId);
-                },
-                mouseout: () => {
-                  setHoveredMarkerId(null);
-                }
               }}
             >
-              <Tooltip direction="top" offset={[0, -20]} className="marker-tooltip">
-                {getListingTitle(listing)}
-              </Tooltip>
-              
               <Popup>
                 <div className="popup-content">
                   <h3 style={{ margin: '0 0 8px 0' }}>{getListingTitle(listing)}</h3>
@@ -169,23 +138,7 @@ const MapComponent = ({ listings = [] }) => {
                   {listing.rent && (
                     <p><strong>Rent:</strong> {formatRent(listing.rent)}</p>
                   )}
-                  <div style={{ marginTop: '15px', textAlign: 'center' }}>
-                    <Link 
-                      to={`/listing/${listing.id}`} 
-                      className="marker-btn" 
-                      style={{ 
-                        display: 'inline-block',
-                        padding: '8px 16px',
-                        backgroundColor: '#333',
-                        color: 'white',
-                        textDecoration: 'none',
-                        borderRadius: '5px',
-                        fontSize: '14px'
-                      }}
-                    >
-                      See More
-                    </Link>
-                  </div>
+                  <Link to={`/listing/${listing.id}`} className="marker-btn" >See More</Link>
                 </div>
               </Popup>
             </Marker>
