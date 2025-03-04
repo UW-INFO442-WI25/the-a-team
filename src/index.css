@@ -132,6 +132,12 @@ body {
     align-items: center;
 }
 
+.listing-price-highlight {
+    margin-left: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
 .heart-icon {
     color: #666;
     cursor: pointer;
@@ -713,10 +719,3 @@ body {
         font-size: 1rem;
     }
 }
-
-
-
-
-
-
-

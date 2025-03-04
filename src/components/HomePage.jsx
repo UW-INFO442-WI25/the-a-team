@@ -115,11 +115,15 @@ export function HomePage(props) {
                                                     ? listing.propertyName
                                                     : listing.location.streetAddress}
                                             </span>
+                                            {listing.rent && listing.rent.min && listing.rent.max && (
+                                                <span className="listing-price-highlight">
+                                                    <strong>${listing.rent.min} - ${listing.rent.max}</strong>
+                                                </span>
+                                            )}
                                         </div>
                                         <div className="listing-details">
                                             <p>Address: {listing.location.streetAddress}</p>
                                             <p>Units: {formatUnits(listing.beds)}</p>
-                                            <p>Rent: {formatRent(listing.rent)}</p>
                                             <p>Rating: {listing.rating} ⭐</p>
                                         </div>
                                         <Link to={`/listing/${listing.id}`} className="see-more-btn">See More</Link>
