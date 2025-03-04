@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import MapComponent from './Map';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import MapComponent from './Map';
 
 export function HomePage(props) {
     const { listings = apartmentListings } = props;
@@ -10,6 +10,43 @@ export function HomePage(props) {
     const [minRating, setMinRating] = useState(0);
     const [maxPrice, setMaxPrice] = useState(Infinity);
     const [minBedrooms, setMinBedrooms] = useState(0);
+    const [filteredListings, setFilteredListings] = useState([]);
+
+    useEffect(() => {
+        if (!listings || listings.length === 0) {
+            setFilteredListings([]);
+            return;
+        }
+
+        const filtered = listings
+            .filter((listing) => 
+                listing.location && 
+                listing.location.streetAddress && 
+                listing.location.streetAddress !== "Seattle"
+            )
+            .filter((listing) =>
+                searchQuery === "" ||
+                (listing.propertyName && listing.propertyName.toLowerCase().includes(searchQuery.toLowerCase())) ||
+                (listing.location && 
+                 listing.location.streetAddress && 
+                 listing.location.streetAddress.toLowerCase().includes(searchQuery.toLowerCase()))
+            )
+            .filter((listing) => 
+                typeof listing.rating === 'number' && listing.rating >= minRating
+            )
+            .filter((listing) => 
+                !isFinite(maxPrice) || 
+                (listing.rent && typeof listing.rent.max === 'number' && listing.rent.max <= maxPrice)
+            )
+            .filter((listing) => {
+                if (!listing.beds) return true;
+                const numBeds = parseInt(listing.beds);
+                return isNaN(numBeds) || numBeds >= minBedrooms;
+            });
+        
+        setFilteredListings(filtered);
+        setCurrentPage(1);
+    }, [listings, searchQuery, minRating, maxPrice, minBedrooms]);
 
     const formatUnits = (units) => {
         if (!units) return '';
@@ -21,37 +58,20 @@ export function HomePage(props) {
 
     const handleSearch = (query) => {
         setSearchQuery(query);
-        setCurrentPage(1);
     };
 
     const handleRatingChange = (event) => {
         setMinRating(Number(event.target.value));
-        setCurrentPage(1);
     };
 
     const handlePriceChange = (event) => {
-        setMaxPrice(Number(event.target.value) || Infinity);
-        setCurrentPage(1);
+        const value = event.target.value;
+        setMaxPrice(value === "Infinity" ? Infinity : Number(value));
     };
 
     const handleBedroomsChange = (event) => {
         setMinBedrooms(Number(event.target.value));
-        setCurrentPage(1);
     };
-
-    const filteredListings = listings
-        .filter((listing) => listing.location.streetAddress && listing.location.streetAddress !== "Seattle")
-        .filter((listing) =>
-            searchQuery === "" ||
-            listing.propertyName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            listing.location.streetAddress?.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        .filter((listing) => listing.rating >= minRating)
-        .filter((listing) => listing.rent.max <= maxPrice)
-        .filter((listing) => {
-            const numBeds = parseInt(listing.beds);
-            return isNaN(numBeds) || numBeds >= minBedrooms;
-        });
 
     const totalPages = Math.ceil(filteredListings.length / ITEMS_PER_PAGE);
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -60,6 +80,46 @@ export function HomePage(props) {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
         window.scrollTo(0, 0);
+    };
+
+    const renderPaginationButtons = () => {
+        const pageNumbers = [];
+        const maxPagesToShow = 5;
+        
+        let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+        let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+        
+        if (endPage - startPage + 1 < maxPagesToShow) {
+            startPage = Math.max(1, endPage - maxPagesToShow + 1);
+        }
+
+        if (startPage > 1) {
+            pageNumbers.push(
+                <button key={1} onClick={() => handlePageChange(1)} className={`page-btn ${currentPage === 1 ? 'active' : ''}`}>1</button>
+            );
+            
+            if (startPage > 2) {
+                pageNumbers.push(<span key="ellipsis1" className="page-ellipsis">...</span>);
+            }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            pageNumbers.push(
+                <button key={i} onClick={() => handlePageChange(i)} className={`page-btn ${currentPage === i ? 'active' : ''}`}>{i}</button>
+            );
+        }
+
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+                pageNumbers.push(<span key="ellipsis2" className="page-ellipsis">...</span>);
+            }
+            
+            pageNumbers.push(
+                <button key={totalPages} onClick={() => handlePageChange(totalPages)} className={`page-btn ${currentPage === totalPages ? 'active' : ''}`}>{totalPages}</button>
+            );
+        }
+
+        return pageNumbers;
     };
 
     return (
@@ -75,7 +135,7 @@ export function HomePage(props) {
                             onChange={(e) => handleSearch(e.target.value)}
                         />
                         <div className="filters">
-                            <select className="filter-btn" value={maxPrice} onChange={handlePriceChange}>
+                            <select className="filter-btn" value={maxPrice === Infinity ? "Infinity" : maxPrice} onChange={handlePriceChange}>
                                 <option value="Infinity">Price</option>
                                 <option value="1000">Up to $1,000</option>
                                 <option value="1500">Up to $1,500</option>
@@ -106,14 +166,20 @@ export function HomePage(props) {
                             currentListings.map((listing) => (
                                 <div key={listing.id} className="listing-card">
                                     <div>
-                                        <img src={listing.photos[0]} alt="Apartment image" className="listing-image"></img>
+                                        <img 
+                                            src={listing.photos && listing.photos.length > 0 ? listing.photos[0] : '/placeholder-apartment.jpg'} 
+                                            alt="Apartment image" 
+                                            className="listing-image"
+                                        />
                                     </div>
                                     <div className="listing-content">
                                         <div className="listing-title">
                                             <span>
                                                 {listing.propertyName && !listing.propertyName.includes('$')
                                                     ? listing.propertyName
-                                                    : listing.location.streetAddress}
+                                                    : (listing.location && listing.location.streetAddress 
+                                                        ? listing.location.streetAddress 
+                                                        : 'Unnamed Property')}
                                             </span>
                                             {listing.rent && listing.rent.min && listing.rent.max && (
                                                 <span className="listing-price-highlight">
@@ -122,7 +188,7 @@ export function HomePage(props) {
                                             )}
                                         </div>
                                         <div className="listing-details">
-                                            <p>Address: {listing.location.streetAddress}</p>
+                                            <p>Address: {listing.location && listing.location.streetAddress ? listing.location.streetAddress : 'Address not available'}</p>
                                             <p>Units: {formatUnits(listing.beds)}</p>
                                             <p>Rating: {listing.rating} ⭐</p>
                                         </div>
@@ -136,11 +202,25 @@ export function HomePage(props) {
 
                         {totalPages > 1 && filteredListings.length > 0 && (
                             <div className="pagination">
-                                <button onClick={() => handlePageChange(Math.max(1, currentPage - 1))} disabled={currentPage === 1} className="page-btn prev-btn">&laquo;</button>
-                                {Array.from({ length: totalPages }, (_, i) => (
-                                    <button key={i + 1} onClick={() => handlePageChange(i + 1)} className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`}>{i + 1}</button>
-                                ))}
-                                <button onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))} disabled={currentPage === totalPages} className="page-btn next-btn">&raquo;</button>
+                                <button 
+                                    onClick={() => handlePageChange(Math.max(1, currentPage - 1))} 
+                                    disabled={currentPage === 1} 
+                                    className="page-btn prev-btn"
+                                    aria-label="Previous page"
+                                >
+                                    &laquo;
+                                </button>
+                                
+                                {renderPaginationButtons()}
+                                
+                                <button 
+                                    onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))} 
+                                    disabled={currentPage === totalPages} 
+                                    className="page-btn next-btn"
+                                    aria-label="Next page"
+                                >
+                                    &raquo;
+                                </button>
                             </div>
                         )}
                     </div>
