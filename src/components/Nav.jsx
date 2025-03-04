@@ -27,6 +27,7 @@ export function NavBar() {
         {/* Desktop navigation links (appear in nav bar)*/}
         <div className="nav-links">
           <NavLink to="/" className="nav-item">Home</NavLink>
+          <NavLink to="/resources" className="nav-item">Resources</NavLink>
           <NavLink to="/about" className="nav-item">About</NavLink>
         </div>
       </div>
@@ -34,6 +35,7 @@ export function NavBar() {
       {/* Mobile nav links (appear under nav bar) */}
       <div className={`nav-links-mobile ${hamburgerOpen ? 'active' : ''}`}>
         <NavLink to="/" className="nav-item-mobile">Home</NavLink>
+        <NavLink to="/resources" className="nav-item-mobile">Resources</NavLink>
         <NavLink to="/about" className="nav-item-mobile">About</NavLink>
       </div>
     </>

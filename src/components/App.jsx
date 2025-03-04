@@ -3,6 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import { Routes, Route } from 'react-router-dom';
 import { HomePage } from './HomePage';
 import { AboutPage } from './AboutPage';
+import { ResourcesPage } from './ResourcesPage';
 import { ListingPage } from './ListingPage';
 import { NavBar } from './Nav';
 
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage listings={aptData}/>} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/listing/:id" element={<ListingPage listings={aptData}/>} />
       </Routes>
     </>
