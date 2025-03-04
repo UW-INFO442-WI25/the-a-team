@@ -183,7 +183,10 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    height: 400px;
+    min-height: 400px;
+    height: calc(100vh - 180px);
+    position: sticky;
+    top: 20px;
 }
 
 .container {
@@ -530,11 +533,15 @@ body {
         padding: 20px;
         gap: 20px;
         flex-direction: row;
+        min-height: calc(100vh - 120px);
     }
 
     .map-container {
-        height: 800px;
+        min-height: 800px;
+        height: calc(100vh - 120px);
         margin: 0;
+        position: sticky;
+        top: 20px;
     }
 }
 /* Pagination Styles */
