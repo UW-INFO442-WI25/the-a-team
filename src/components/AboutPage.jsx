@@ -62,6 +62,7 @@ export function AboutPage() {
                                 you with trusted options that fit your needs.
                             </p>
                         </div>
+                    </div>
 
                         <div className="stats">
                             <div className="stat-item">
@@ -75,13 +76,12 @@ export function AboutPage() {
                                 <p>Just for You</p>
                             </div>
                         </div>
-                    </div>
 
                     <div className="brand-right">
                         <img 
                             src="/img/ModernView.png" 
                             alt="Modern apartment view" 
-                            className="apartment-image" 
+                            className="apartment-img" 
                         />
                     </div>
                 </div>

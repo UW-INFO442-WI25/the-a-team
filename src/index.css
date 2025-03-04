@@ -207,10 +207,13 @@ body {
 }
 
 .stats {
-    flex-direction: column;
     gap: 20px;
 }
 
+.apartment-img {
+    flex: 1;
+    max-width: 100%;
+}
 
 .show-more {
     display: block;
@@ -275,7 +278,7 @@ body {
 
 .brand-title h2 {
     font-size: 36px;
-    color: #333;
+    color: #6841AD;
     line-height: 1.2;
 }
 
@@ -304,13 +307,20 @@ body {
     color: #666;
 }
 
+/* Stats Section */
 .stats {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .stat-item {
-    flex: 1;
+    flex: 1 ;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .stat-item h3 {
@@ -327,6 +337,7 @@ body {
 
 .brand-right {
     flex: 1;
+    width: 100%;
 }
 
 .mission-section {
