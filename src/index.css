@@ -422,6 +422,36 @@ body {
     color: #666;
 }
 
+/* Resources Page Styling */
+
+.resources-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.resources-content {
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resources-container h1{
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+.resources-container h2{
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+.resources-content p {
+    line-height: 1.5;
+    
+}
+
 /* Search Page Specific Styles */
 .search-main {
     display: flex;
