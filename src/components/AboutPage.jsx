@@ -72,7 +72,7 @@ export function AboutPage() {
                         />
                         <div className="stats">
                             <div className="stat-item">
-                                <h3>80+</h3>
+                                <h3>30+</h3>
                                 <p>Curated Stays,</p>
                                 <p>Tailored for You</p>
                             </div>
