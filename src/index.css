@@ -206,10 +206,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
-.stats {
-    gap: 20px;
-}
-
 .apartment-img {
     flex: 1;
     max-width: 100%;

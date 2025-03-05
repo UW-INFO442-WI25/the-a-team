@@ -56,49 +56,45 @@ export function AboutPage() {
                         <div className="who-we-are">
                             <h3>Who <span className="highlight">We Are</span></h3>
                             <p>
-                                We are a dedicated platform designed to help students find the perfect 
-                                place to stay with ease and confidence. Whether you're looking for a cozy 
-                                apartment, a shared living space, or student-friendly housing, we connect 
+                                We are a dedicated platform designed to help students find the perfect
+                                place to stay with ease and confidence. Whether you're looking for a cozy
+                                apartment, a shared living space, or student-friendly housing, we connect
                                 you with trusted options that fit your needs.
                             </p>
                         </div>
                     </div>
 
-                        <div className="stats">
-                            <div className="stat-item">
-                                <h3>300+</h3>
-                                <p>Curated Stays,</p>
-                                <p>Tailored for You</p>
-                            </div>
-                            <div className="stat-item">
-                                <h3>15+</h3>
-                                <p>Personalized Services,</p>
-                                <p>Just for You</p>
-                            </div>
-                        </div>
-
-                    <div className="brand-right">
+                   <div className="brand-right">
                         <img 
                             src="/img/ModernView.png" 
                             alt="Modern apartment view" 
                             className="apartment-img" 
                         />
+                        <div className="stats">
+                            <div className="stat-item">
+                                <h3>80+</h3>
+                                <p>Curated Stays,</p>
+                                <p>Tailored for You</p>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
 
                 <div className="team-section">
                     <h2>Our Team</h2>
                     <div className="team-grid">
                         {teamMembers.map((member, index) => (
-                            <div 
-                                key={index} 
-                                className="team-member" 
+                            <div
+                                key={index}
+                                className="team-member"
                                 style={{ backgroundColor: member.bgColor }}
                             >
                                 <div className="member-image">
-                                    <img 
-                                        src={member.image} 
-                                        alt={member.name} 
+                                    <img
+                                        src={member.image}
+                                        alt={member.name}
                                         onError={(e) => {
                                             e.target.src = '/images/placeholder-profile.jpg';
                                         }}
@@ -108,9 +104,9 @@ export function AboutPage() {
                                     <h3>{member.name}</h3>
                                     <p>{member.role}</p>
                                     {member.linkedin && (
-                                        <a 
-                                            href={member.linkedin} 
-                                            target="_blank" 
+                                        <a
+                                            href={member.linkedin}
+                                            target="_blank"
                                             rel="noopener noreferrer"
                                             className="linkedin-link"
                                             aria-label={`${member.name}'s LinkedIn profile`}
@@ -127,9 +123,9 @@ export function AboutPage() {
                 <div className="mission-section">
                     <h2>Our Mission</h2>
                     <p>
-                        The United Nations' eleventh goal, sustainable cities and communities, 
-                        aims to make cities inclusive, safe, resilient, and sustainable. Our project 
-                        helps college students at the University of Washington find affordable housing 
+                        The United Nations' eleventh goal, sustainable cities and communities,
+                        aims to make cities inclusive, safe, resilient, and sustainable. Our project
+                        helps college students at the University of Washington find affordable housing
                         within commuting distance to school that fits their needs.
                     </p>
                 </div>
