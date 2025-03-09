@@ -36,7 +36,6 @@ const getListingTitle = (listing) => {
 };
 
 const MapComponent = ({ listings = [] }) => {
-  const [selectedListing, setSelectedListing] = useState(null);
   const [mapCenter, setMapCenter] = useState([47.663041, -122.314257]);
   const [mapZoom, setMapZoom] = useState(14);
   
