@@ -33,3 +33,6 @@ Natalie Olson: 38
 Maya Lukalapu: 4
 Cindy Susanto: 6
 
+## Known bugs
+Occasionally, our home page icon "Husky Habitat" with a visual of a puppy disappears when the page has been open for a long period of time. We have tried to fix this but it has not happened. This does not interfere with functionality, purely just aesthetics. 
+
