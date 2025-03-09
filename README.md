@@ -27,7 +27,7 @@ Natalie Olson
 Nathaniel Sayasack
 
 ## Number of commits per person
-Nandita Raman: 10
+Nandita Raman: 11
 Nathaniel Sayasack: 18
 Natalie Olson: 38
 Maya Lukalapu: 4
