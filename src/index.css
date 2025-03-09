@@ -207,6 +207,7 @@ body {
 }
 
 .apartment-img {
+    visibility: visible;
     flex: 1;
     max-width: 100%;
 }
