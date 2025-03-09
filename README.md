@@ -26,5 +26,10 @@ Nandita Raman
 Natalie Olson
 Nathaniel Sayasack
 
-## User Personas
+## Number of commits per person
+Nandita Raman: 10
+Nathaniel Sayasack: 18
+Natalie Olson: 38
+Maya Lukalapu: 4
+Cindy Susanto: 6
 
