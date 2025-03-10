@@ -9,7 +9,7 @@
     "Roosevelt",
     "Kale Studios"
   ],
-  "img": "../public/img/kalestudios.jpg",
+  "img": "../img/kalestudios.jpg",
   "alt": "Kale Studios",
   "lastUpdated": "4 Days Ago",
   "location": {
@@ -727,7 +727,7 @@
     "University District",
     "Avenida by aPodment Suites"
   ],
-  "img": "../public/img/avenida.jpg",
+  "img": "../img/avenida.jpg",
   "alt": "Avenida by aPodment Suites",
   "lastUpdated": "4 Days Ago",
   "location": {
@@ -1333,7 +1333,7 @@
     "University District",
     "Cielo"
   ],
-  "img": "../public/img/cielo.jpg",
+  "img": "../img/cielo.jpg",
   "alt": "Cielo Apartments",
   "lastUpdated": "5 Days Ago",
   "location": {
@@ -2048,7 +2048,7 @@
   "id": "jc8wsf5",
   "propertyName": "The Courtyard8",
   "url": "https://www.apartments.com/the-courtyard8-seattle-wa/jc8wsf5/",
-  "img": "../public/img/courtyard-uw.jpg",
+  "img": "../img/courtyard-uw.jpg",
   "alt": "The Courtyard8",
   "breadcrumbs": [
     "Washington",
@@ -2912,7 +2912,7 @@
   "id": "d6m705l",
   "propertyName": "The M Seattle",
   "url": "https://www.apartments.com/the-m-seattle-seattle-wa/d6m705l/",
-  "img": "../public/img/the-m.jpg",
+  "img": "../img/the-m.jpg",
   "alt": "The M Seattle",
   "breadcrumbs": [
     "Washington",
@@ -6191,7 +6191,7 @@
   "id": "dys23mh",
   "propertyName": "Ori on the Ave",
   "url": "https://www.apartments.com/ori-on-the-ave-seattle-wa/dys23mh/",
-  "img": "../public/img/ori.jpg",
+  "img": "../img/ori.jpg",
   "alt": "Ori on the Ave",
   "breadcrumbs": [
     "Washington",
@@ -7236,7 +7236,7 @@
   "id": "73bdztz",
   "propertyName": "Avenue Building: Centrally located in Univ...",
   "url": "https://www.apartments.com/avenue-building-centrally-located-in-univ-seattle-wa/73bdztz/",
-  "img": "../public/img/avenue-building.jpg",
+  "img": "../img/avenue-building.jpg",
   "alt": "Avenue Building",
   "breadcrumbs": [
     "Washington",
@@ -7830,7 +7830,7 @@
   "id": "nrb0ttm",
   "propertyName": "Novo Apartments",
   "url": "https://www.apartments.com/novo-apartments-seattle-wa/nrb0ttm/",
-  "img": "../public/img/novo.jpg",
+  "img": "../img/novo.jpg",
   "alt": "Novo Apartments",
   "breadcrumbs": [
     "Washington",
@@ -17539,7 +17539,7 @@
   "id": "11zs076",
   "propertyName": "Parsonage",
   "url": "https://www.apartments.com/parsonage-seattle-wa/11zs076/",
-  "img": "../public/img/parsonage.jpg",
+  "img": "../img/parsonage.jpg",
   "alt": "Pasonage Apartments",
   "breadcrumbs": [
     "Washington",
@@ -18967,7 +18967,7 @@
   "id": "gd2xwbw",
   "propertyName": "Theory U District",
   "url": "https://www.apartments.com/theory-u-district-seattle-wa/gd2xwbw/",
-  "img": "../public/img/theory.jpg",
+  "img": "../img/theory.jpg",
   "alt": "Theory U District",
   "breadcrumbs": [
     "Washington",
@@ -32001,7 +32001,7 @@
   "id": "8q8cpl2",
   "propertyName": "Verve Flats",
   "url": "https://www.apartments.com/verve-flats-seattle-wa/8q8cpl2/",
-  "img": "../public/img/verve.jpg",
+  "img": "../img/verve.jpg",
   "alt": "Verve Flats",
   "breadcrumbs": [
     "Washington",
@@ -35334,7 +35334,7 @@
   "id": "ch2fkgd",
   "propertyName": "Aubrey Studios",
   "url": "https://www.apartments.com/aubrey-studios-seattle-wa/ch2fkgd/",
-  "img": "../public/img/aubrey.jpg",
+  "img": "../img/aubrey.jpg",
   "alt": "Aubrey Studios",
   "breadcrumbs": [
     "Washington",
@@ -37736,7 +37736,7 @@
   "id": "wcyj04k",
   "propertyName": "Ivy Ridge Apartments",
   "url": "https://www.apartments.com/ivy-ridge-apartments-seattle-wa/wcyj04k/",
-  "img": "../public/img/ivy-ridge.jpg",
+  "img": "../img/ivy-ridge.jpg",
   "alt": "Ivy Ridge Apartments",
   "breadcrumbs": [
     "Washington",
@@ -43584,7 +43584,7 @@
   "id": "fd6hspr",
   "propertyName": "The Kennedy Building",
   "url": "https://www.apartments.com/the-kennedy-building-seattle-wa/fd6hspr/",
-  "img": "../public/img/kennedy.jpg",
+  "img": "../img/kennedy.jpg",
   "alt": "The Kennedy Building",
   "breadcrumbs": [
     "Washington",
@@ -45731,7 +45731,7 @@
   "id": "711w2cz",
   "propertyName": "DXU",
   "url": "https://www.apartments.com/dxu-seattle-wa/711w2cz/",
-  "img": "../public/img/dxu.jpg",
+  "img": "../img/dxu.jpg",
   "alt": "DXU",
   "breadcrumbs": [
     "Washington",
@@ -48957,7 +48957,7 @@
   "id": "q8qwf8y",
   "propertyName": "Bayview West Apartments",
   "url": "https://www.apartments.com/bayview-west-apartments-seattle-wa/q8qwf8y/",
-  "img": "../public/img/bayview.jpg",
+  "img": "../img/bayview.jpg",
   "alt": "Bayview West Apartments",
   "breadcrumbs": [
     "Washington",
@@ -49574,7 +49574,7 @@
   "id": "6r3gw3s",
   "propertyName": "Escolier Apartments",
   "url": "https://www.apartments.com/escolier-apartments-seattle-wa/6r3gw3s/",
-  "img": "../public/img/escolier.jpg",
+  "img": "../img/escolier.jpg",
   "alt":"Escolier Apartments",
   "breadcrumbs": [
     "Washington",
@@ -50201,7 +50201,7 @@
   "id": "w1jrb2l",
   "propertyName": "Glengarry",
   "url": "https://www.apartments.com/glengarry-seattle-wa/w1jrb2l/",
-  "img": "../public/img/glengarry.jpg",
+  "img": "../img/glengarry.jpg",
   "alt":"Glengarry",
   "breadcrumbs": [
     "Washington",
@@ -50902,7 +50902,7 @@
   "id": "t9ddzqc",
   "propertyName": "A&T Investments",
   "url": "https://www.apartments.com/at-investments-seattle-wa/t9ddzqc/",
-  "img": "../public/img/a-t.jpg",
+  "img": "../img/a-t.jpg",
   "alt": "A&T Investments",
   "breadcrumbs": [
     "Washington",
@@ -53863,7 +53863,7 @@
   "id": "pw4kxhs",
   "propertyName": "Nolan",
   "url": "https://www.apartments.com/nolan-seattle-wa/pw4kxhs/",
-  "img": "../public/img/nolan.jpg",
+  "img": "../img/nolan.jpg",
   "alt": "Nolan Apartments",
   "breadcrumbs": [
     "Washington",
@@ -56348,7 +56348,7 @@
   "id": "b353wfb",
   "propertyName": "Normandy",
   "url": "https://www.apartments.com/normandy-seattle-wa/b353wfb/",
-  "img": "../public/img/normandy.jpg",
+  "img": "../img/normandy.jpg",
   "alt": "Normandy Apartments",
   "breadcrumbs": [
     "Washington",
@@ -57016,7 +57016,7 @@
   "id": "kzk0g0c",
   "propertyName": "The Standard at Seattle",
   "url": "https://www.apartments.com/the-standard-at-seattle-seattle-wa/kzk0g0c/",
-  "img": "../public/img/standard.jpg",
+  "img": "../img/standard.jpg",
   "alt": "The Standard at Seattle",
   "breadcrumbs": [
     "Washington",
@@ -68515,7 +68515,7 @@
   "id": "tynqzvb",
   "propertyName": "Yugo Seattle Wilsonian",
   "url": "https://www.apartments.com/yugo-seattle-wilsonian-seattle-wa/tynqzvb/",
-  "img": "../public/img/yugo.jpg",
+  "img": "../img/yugo.jpg",
   "alt": "Yugo Seattle Wilsonian",
   "breadcrumbs": [
     "Washington",
@@ -71253,7 +71253,7 @@
   "id": "gekbpwy",
   "propertyName": "The Stax",
   "url": "https://www.apartments.com/the-stax-seattle-wa/gekbpwy/",
-  "img": "../public/img/the-stax.jpg",
+  "img": "../img/the-stax.jpg",
   "alt": "The Stax",
   "breadcrumbs": [
     "Washington",
@@ -76276,7 +76276,7 @@
   "id": "f7vv06v",
   "propertyName": "Malloy Apartment Homes",
   "url": "https://www.apartments.com/malloy-apartment-homes-seattle-wa/f7vv06v/",
-  "img": "../public/img/malloy-apartments.jpg",
+  "img": "../img/malloy-apartments.jpg",
   "alt": "Malloy Apartments Homes",
   "breadcrumbs": [
     "Washington",
@@ -77071,7 +77071,7 @@
   "id": "h9wemm3",
   "propertyName": "Broadstone Strata",
   "url": "https://www.apartments.com/broadstone-strata-seattle-wa/h9wemm3/",
-  "img": "../public/img/broadstone.jpg",
+  "img": "../img/broadstone.jpg",
   "alt": "Broadstone Strata",
   "breadcrumbs": [
     "Washington",
@@ -81080,7 +81080,7 @@
   "id": "npgvxlq",
   "propertyName": "Arista",
   "url": "https://www.apartments.com/arista-seattle-wa/npgvxlq/",
-  "img": "../public/img/arista.jpg",
+  "img": "../img/arista.jpg",
   "alt": "Arista Apartments",
   "breadcrumbs": [
     "Washington",
@@ -86042,7 +86042,7 @@
   "id": "7lspshx",
   "propertyName": "The Accolade",
   "url": "https://www.apartments.com/the-accolade-seattle-wa/7lspshx/",
-  "img": "../public/img/accolade.jpg",
+  "img": "../img/accolade.jpg",
   "alt": "The Accolade",
   "breadcrumbs": [
     "Washington",
@@ -89090,7 +89090,7 @@
   "id": "k9ppx0b",
   "propertyName": "Morino",
   "url": "https://www.apartments.com/morino-seattle-wa/k9ppx0b/",
-  "img": "../public/img/morino.jpg",
+  "img": "../img/morino.jpg",
   "alt": "Morino",
   "breadcrumbs": [
     "Washington",
@@ -91838,7 +91838,7 @@
   "id": "7qm3kzz",
   "propertyName": "Burke + Union Apartments",
   "url": "https://www.apartments.com/burke-union-apartments-seattle-wa/7qm3kzz/",
-  "img": "../public/img/burke-union.jpg",
+  "img": "../img/burke-union.jpg",
   "alt": "Burke + Union Apartments",
   "breadcrumbs": [
     "Washington",
@@ -92771,7 +92771,7 @@
   "id": "5c1sqpq",
   "propertyName": "Maplewood Apartments",
   "url": "https://www.apartments.com/maplewood-apartments-seattle-wa/5c1sqpq/",
-  "img": "../public/img/maplewood.jpg",
+  "img": "../img/maplewood.jpg",
   "alt": "Maplewood Apartments",
   "breadcrumbs": [
     "Washington",
@@ -93627,7 +93627,7 @@
   "id": "4rbpb6j",
   "propertyName": "Barbi Apartments!",
   "url": "https://www.apartments.com/welcome-to-the-barbi-apartments-seattle-wa/4rbpb6j/",
-  "img": "../public/img/barbi.jpg",
+  "img": "../img/barbi.jpg",
   "alt": "Barbi Apartments",
   "breadcrumbs": [
     "Washington",
@@ -94644,7 +94644,7 @@
   "id": "39kw2kf",
   "propertyName": "The University Regency",
   "url": "https://www.apartments.com/the-university-regency-seattle-wa/39kw2kf/",
-  "img": "../public/img/university-regency.jpg",
+  "img": "../img/university-regency.jpg",
   "alt": "The University Regency",
   "breadcrumbs": [
     "Washington",
@@ -96704,7 +96704,7 @@
   "id": "wfb35wl",
   "propertyName": "Washington Square Apartments",
   "url": "https://www.apartments.com/4504-16th-ave-ne-seattle-wa/wfb35wl/",
-  "img": "../public/img/washington-square.jpg",
+  "img": "../img/washington-square.jpg",
   "alt": "Washington Square Apartments",
   "breadcrumbs": [
     "Washington",
@@ -98058,7 +98058,7 @@
   "id": "nrnk99p",
   "propertyName": "50th & Roosevelt",
   "url": "https://www.apartments.com/50th-roosevelt-seattle-wa/nrnk99p/",
-  "img": "../public/img/50th-roosevelt.jpg",
+  "img": "../img/50th-roosevelt.jpg",
   "alt": "50th & Roosevelt",
   "breadcrumbs": [
     "Washington",
@@ -99612,7 +99612,7 @@
   "id": "s0e6b75",
   "propertyName": "Nordheim Court UW Student Apartments",
   "url": "https://www.apartments.com/nordheim-court-uw-student-apartments-seattle-wa/s0e6b75/",
-  "img": "../public/img/nordheim.jpg",
+  "img": "../img/nordheim.jpg",
   "alt": "Nordheim Court UW Student Apartments",
   "breadcrumbs": [
     "Washington",
@@ -101504,7 +101504,7 @@
   "id": "986xcx6",
   "propertyName": "Clara Apartments",
   "url": "https://www.apartments.com/clara-apartments-seattle-wa/986xcx6/",
-  "img": "../public/img/clara.jpg",
+  "img": "../img/clara.jpg",
   "alt": "Clara Apartments",
   "breadcrumbs": [
     "Washington",
@@ -107835,7 +107835,7 @@
   "id": "ft3kt7r",
   "propertyName": "Corner 63",
   "url": "https://www.apartments.com/corner-63-seattle-wa/ft3kt7r/",
-  "img": "../public/img/corner-63.jpg",
+  "img": "../img/corner-63.jpg",
   "alt": "Corner 63",
   "breadcrumbs": [
     "Washington",
@@ -112803,7 +112803,7 @@
   "id": "n48pv6m",
   "propertyName": "Trailside",
   "url": "https://www.apartments.com/trailside-seattle-wa/n48pv6m/",
-  "img": "../public/img/trailside.jpg",
+  "img": "../img/trailside.jpg",
   "alt": "Trailside Apartments",
   "breadcrumbs": [
     "Washington",
@@ -119955,7 +119955,7 @@
   "id": "kknd908",
   "propertyName": "Blue Lake Apartments",
   "url": "https://www.apartments.com/blue-lake-apartments-seattle-wa/kknd908/",
-  "img": "../public/img/blue-lake.jpg",
+  "img": "../img/blue-lake.jpg",
   "alt": "Blue Lake Apartments",
   "breadcrumbs": [
     "Washington",
@@ -123236,7 +123236,7 @@
   "id": "1bl0g26",
   "propertyName": "Robins Nest",
   "url": "https://www.apartments.com/robins-nest-seattle-wa/1bl0g26/",
-  "img": "../public/img/robins-nest.jpg",
+  "img": "../img/robins-nest.jpg",
   "alt": "Robins Nest",
   "breadcrumbs": [
     "Washington",
@@ -125358,7 +125358,7 @@
   "id": "clvqgvg",
   "propertyName": "Radian Apartments",
   "url": "https://www.apartments.com/radian-apartments-seattle-wa/clvqgvg/",
-  "img": "../public/img/radian.jpg",
+  "img": "../img/radian.jpg",
   "alt": "Radian Apartments",
   "breadcrumbs": [
     "Washington",
@@ -125967,7 +125967,7 @@
   "id": "n9485rp",
   "propertyName": "Saint Moritz",
   "url": "https://www.apartments.com/saint-moritz-seattle-wa/n9485rp/",
-  "img": "../public/img/saint-moritz.jpg",
+  "img": "../img/saint-moritz.jpg",
   "alt": "Saint Moritz",
   "breadcrumbs": [
     "Washington",
@@ -126563,7 +126563,7 @@
   "id": "81gy302",
   "propertyName": "Village Vista Apartments",
   "url": "https://www.apartments.com/village-vista-apartments-seattle-wa/81gy302/",
-  "img": "../public/img/village-vista.jpg",
+  "img": "../img/village-vista.jpg",
   "alt": "Village Vista Apartments",
   "breadcrumbs": [
     "Washington",
@@ -128884,7 +128884,7 @@
   "id": "ptzndkt",
   "propertyName": "Husky Court/Place",
   "url": "https://www.apartments.com/husky-court-place-seattle-wa/ptzndkt/",
-  "img": "../public/img/husky0court.jpg",
+  "img": "../img/husky0court.jpg",
   "alt": "Husky Court/Place",
   "breadcrumbs": [
     "Washington",
@@ -129423,7 +129423,7 @@
   "id": "dgw4wwk",
   "propertyName": "U20 Apartments",
   "url": "https://www.apartments.com/u20-apartments-seattle-wa/dgw4wwk/",
-  "img": "../public/img/u20.jpg",
+  "img": "../img/u20.jpg",
   "alt": "U20 Apartments",
   "breadcrumbs": [
     "Washington",
@@ -133978,7 +133978,7 @@
   "id": "lbgnpjg",
   "propertyName": "Augusta Apartments",
   "url": "https://www.apartments.com/augusta-apartments-seattle-wa/lbgnpjg/",
-  "img": "../public/img/augusta.jpg",
+  "img": "../img/augusta.jpg",
   "alt": "Augusta Apartments",
   "breadcrumbs": [
     "Washington",
@@ -138606,7 +138606,7 @@
   "id": "nf2e3dn",
   "propertyName": "Campus View",
   "url": "https://www.apartments.com/campus-view-seattle-wa/nf2e3dn/",
-  "img": "../public/img/campus-view.jpg",
+  "img": "../img/campus-view.jpg",
   "alt": "Campus View",
   "breadcrumbs": [
     "Washington",
@@ -141080,7 +141080,7 @@
   "id": "6c04cst",
   "propertyName": "U Place Apartments",
   "url": "https://www.apartments.com/u-place-apartments-seattle-wa/6c04cst/",
-  "img": "../public/img/uplace.jpg",
+  "img": "../img/uplace.jpg",
   "alt": "U Place Apartments",
   "breadcrumbs": [
     "Washington",
@@ -142511,7 +142511,7 @@
   "id": "vj0epve",
   "propertyName": "TAS Investments",
   "url": "https://www.apartments.com/tas-investments-seattle-wa/vj0epve/",
-  "img": "../public/img/tas-investments.jpg",
+  "img": "../img/tas-investments.jpg",
   "alt": "TAS Investments",
   "breadcrumbs": [
     "Washington",
@@ -143890,7 +143890,7 @@
   "id": "ktf0f58",
   "propertyName": "The Penrith Apartments",
   "url": "https://www.apartments.com/the-penrith-apartments-seattle-wa/ktf0f58/",
-  "img": "../public/img/penrith.jpg",
+  "img": "../img/penrith.jpg",
   "alt": "The Penrith Apartments",
   "breadcrumbs": [
     "Washington",
@@ -145053,7 +145053,7 @@
   "id": "np3qvbp",
   "propertyName": "Lightbox",
   "url": "https://www.apartments.com/lightbox-seattle-wa/np3qvbp/",
-  "img": "../public/img/lightbox.jpg",
+  "img": "../img/lightbox.jpg",
   "alt": "Lightbox",
   "breadcrumbs": [
     "Washington",
