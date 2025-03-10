@@ -11,28 +11,29 @@ How might we support UW students in identifying and securing the most affordable
 ## Features
 Home Page
 - Map: An interactive map of the U-District area of Seattle that users can use to find housing options in the area.
-- Map Filtering: Allows users to more specifically search the relevant housing options based on factors like rent price, lease timelines, number of bedrooms, etc.
+- Map Markers: Markers appear on the map to indicate apartment listing locations and can be interacted with to show a listing data popup.
+- Map Filtering: Allows users to more specifically search the relevant housing options based on factors like rent price, rating, number of bedrooms, etc.
 Listings
-- Housing listings with rent, rooms, commute distance, etc.
-- Housing credibility rating
+- Housing listings with rent, rooms, amentities, etc.
+- Resources page with additional information about the affordable housing crisis and specific resources for UW students about utility services, legal advice for lease agreements, and moving services
 
 ## Published Site
 https://huskyhabitat-8a5be.web.app/
 
-## Group Members
-Cindy Susanto
-Maya Lukalapu
-Nandita Raman
-Natalie Olson
-Nathaniel Sayasack
+## Built with:
+- React.js
+- React Leaflet
+- HTML, CSS, Javascript
 
-## Number of commits per person
-Nandita Raman: 11
-Nathaniel Sayasack: 18
-Natalie Olson: 38
-Maya Lukalapu: 4
-Cindy Susanto: 6
+## Group Members
+- Cindy Susanto
+- Maya Lukalapu
+- Nandita Raman
+- Natalie Olson
+- Nathaniel Sayasack
 
 ## Known bugs
 Occasionally, our home page icon "Husky Habitat" with a visual of a puppy disappears when the page has been open for a long period of time. We have tried to fix this but it has not happened. This does not interfere with functionality, purely just aesthetics. 
 
+## References
+Data sourced from https://www.apartments.com/
